@@ -1,0 +1,438 @@
+<html lang="en" class=" js csstransforms csstransforms3d"><head>
+<title>Using turn.js and the new zoom feature</title>
+<meta name="viewport" content="width = 1050, user-scalable = no">
+<link rel="icon" type="image/png" href="../../pics/favicon.png">
+<script src="../../lib/turn.min.js"></script><script src="../../lib/zoom.min.js"></script><script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="../../extras/jquery.mousewheel.min.js"></script>
+
+<!-- turn.js files -->
+
+<script type="text/javascript" src="../../lib/hash.js"></script>
+<script type="text/javascript" src="js/magazine.js"></script>
+<script type="text/javascript" src="js/slideout.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/magazine.css">
+
+
+</head>
+
+
+
+<div class="made" style="display: none;">
+  Tap the page to zoom in <br> <a href="http://www.turnjs.com/get" class="get-now">Get turn.js</a>
+</div>  
+
+<div class="magazine-viewport" style="position: relative; overflow: hidden; width: 1280px; height: 274px;">
+  <div class="container">
+    <div class="magazine animated" style="position: relative; width: 420px; height: 274px; top: -137px; left: -210px; margin-left: -105px;">
+      <!-- Next button -->
+      <div ignore="1" class="next-button" style="height: 274px; background-position: -38px 121px;"></div>
+      <!-- Previous button -->
+      <div ignore="1" class="previous-button" style="display: none; height: 274px; background-position: -4px 121px;"></div>
+    <div style="pointer-events: none; position: absolute; top: 1px; left: -323px; overflow: visible; z-index: auto; display: block;"><div style="position: absolute; top: 31px; left: 179px; overflow: hidden; z-index: 0; width: 345px; height: 345px; -webkit-transform-origin: 100% 100% 0px; -webkit-transform: translate(-296px, -157px) rotate(90deg); display: none;"><div style="position: absolute; top: auto; left: auto; overflow: visible; z-index: auto; cursor: default; width: 210px; height: 274px; right: 0px; bottom: 0px; -webkit-transform-origin: 100% 100% 0px; -webkit-transform: rotate(-90deg) translate(461px, 0px) rotate(360deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; background-image: -webkit-gradient(linear, 100% 100%, 0% 100%, color-stop(0.78308, rgba(0, 0, 0, 0)), color-stop(0.956616, rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0)));"></div></div></div><div style="position: absolute; top: 31px; left: 179px; overflow: hidden; z-index: 0; width: 345px; height: 345px; -webkit-transform-origin: 100% 100% 0px; -webkit-transform: translate(-297px, -157px) rotate(90deg); display: none;"><div style="position: absolute; top: auto; left: auto; overflow: visible; z-index: auto; cursor: default; width: 210px; height: 274px; right: 0px; bottom: 0px; -webkit-transform-origin: 100% 100% 0px; -webkit-transform: rotate(-90deg) translate(460px, 0px) rotate(360deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; background-image: -webkit-gradient(linear, 100% 100%, 0.216919739696309% 100%, color-stop(0.782609, rgba(0, 0, 0, 0)), color-stop(0.956522, rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0)));"></div></div></div><div style="position: absolute; top: 31px; left: 640px; overflow: hidden; z-index: 0; width: 345px; height: 345px; -webkit-transform-origin: 0% 100% 0px; -webkit-transform: translate(0px, -157px) rotate(-90deg); display: none;"><div style="position: absolute; top: auto; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 210px; height: 274px; right: auto; bottom: 0px; -webkit-transform-origin: 0% 100% 0px; -webkit-transform: rotate(90deg) translate(-461px, 0px) rotate(0deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; background-image: -webkit-gradient(linear, 0% 100%, 100% 100%, color-stop(0.78308, rgba(0, 0, 0, 0)), color-stop(0.956616, rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0)));"></div></div></div><div style="position: absolute; top: -1px; left: 323px; overflow: hidden; z-index: 0; width: 345px; height: 345px; -webkit-transform-origin: 100% 100% 0px; -webkit-transform: translate(-296px, -157px) rotate(90deg); display: none;"><div style="position: absolute; top: auto; left: auto; overflow: visible; z-index: auto; cursor: default; width: 210px; height: 274px; right: 0px; bottom: 0px; -webkit-transform-origin: 100% 100% 0px; -webkit-transform: rotate(-90deg) translate(461px, 0px) rotate(360deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; background-image: -webkit-gradient(linear, 100% 100%, 0% 100%, color-stop(0.78308, rgba(0, 0, 0, 0)), color-stop(0.956616, rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0)));"></div></div></div><div style="position: absolute; top: -1px; left: 533px; overflow: hidden; z-index: 0; display: none; width: 345px; height: 345px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 210px; height: 274px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px;"></div></div></div><div style="position: absolute; top: -1px; left: 533px; overflow: hidden; z-index: 24; width: 345px; height: 345px; -webkit-transform-origin: 0% 100% 0px; -webkit-transform: translate(80px, 9px) rotate(-45deg); display: block;"><div style="position: absolute; top: auto; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 210px; height: 274px; right: auto; bottom: 0px; -webkit-transform-origin: 0% 100% 0px; -webkit-transform: rotate(45deg) translate(80px, -130px) rotate(90deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; background-image: -webkit-gradient(linear, 0% 100%, 11.9047619047619% 90.8759124087591%, from(rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0.2)));"></div><div class="page p2 even" style="float: left; width: 210px; height: 274px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; box-shadow: rgba(0, 0, 0, 0.168627) 0px 0px 20px; -webkit-transform-origin: 100% 100% 0px;"><div class="gradient"></div><div class="region  zoom" region-data="url=http%3A%2F%2Flatimes.com%2Fshopping%2Fvegas" style="top: 7%; left: 9%; width: 82%; height: 85%;"></div><img src="pages/2.jpg" style="width: 100%; height: 100%;"></div></div></div></div><div class="shadow" style="position: absolute; top: 0px; left: 210px; overflow: hidden; z-index: auto; width: 210px; height: 274px;"></div><div class="page-wrapper" page="6" style="position: absolute; overflow: hidden; width: 210px; height: 274px; top: 0px; left: 0px; right: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 345px; height: 345px; -webkit-transform-origin: 100% 100% 0px;"><div class="page p6 even" style="float: left; width: 210px; height: 274px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px; -webkit-transform-origin: 100% 100% 0px;"><div class="gradient"></div><div class="region  zoom" region-data="" style="top: 0%; left: 59%; width: 35%; height: 25%;"></div><div class="region  zoom" region-data="" style="top: 13%; left: 11%; width: 38%; height: 24%;"></div><div class="region  zoom" region-data="" style="top: 75%; left: 7%; width: 86%; height: 19%;"></div><img src="pages/6.jpg" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; display: none; background-image: -webkit-gradient(linear, 0% 100%, 120% 100%, color-stop(0.6, rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));"></div></div><div class="page-wrapper" page="4" style="position: absolute; overflow: hidden; width: 210px; height: 274px; top: 0px; left: 0px; right: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 345px; height: 345px; -webkit-transform-origin: 100% 100% 0px;"><div class="page p4 even" style="float: left; width: 210px; height: 274px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px; -webkit-transform-origin: 100% 100% 0px;"><div class="gradient"></div><div class="region  zoom" region-data="" style="top: 0%; left: 62%; width: 37%; height: 24%;"></div><div class="region  zoom" region-data="" style="top: 26%; left: 62%; width: 38%; height: 22%;"></div><div class="region  zoom" region-data="" style="top: 44%; left: 0%; width: 38%; height: 21%;"></div><img src="pages/4.jpg" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; display: none; background-image: -webkit-gradient(linear, 0% 100%, 119.739696312364% 100%, color-stop(0.6, rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));"></div></div><div class="page-wrapper" page="5" style="position: absolute; overflow: hidden; width: 210px; height: 274px; top: 0px; right: 0px; left: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 345px; height: 345px; -webkit-transform-origin: 0% 100% 0px;"><div class="page p5 odd" style="float: left; width: 210px; height: 274px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; -webkit-transform-origin: 0% 100% 0px; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;"><div class="gradient"></div><img src="pages/5.jpg" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; display: none; background-image: -webkit-gradient(linear, 100% 100%, -20% 100%, color-stop(0.6, rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));"></div></div><div class="page-wrapper" page="2" style="position: absolute; overflow: hidden; width: 210px; height: 274px; top: 0px; left: 0px; right: auto; z-index: 0;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 345px; height: 345px; -webkit-transform-origin: 100% 100% 0px;"></div></div><div class="page-wrapper" page="3" style="position: absolute; overflow: hidden; width: 210px; height: 274px; top: 0px; right: 0px; left: auto; z-index: 0;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 345px; height: 345px;"><div class="page p3 odd" style="float: left; width: 210px; height: 274px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; -webkit-transform-origin: 0% 100% 0px; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;"><div class="gradient"></div><div class="region  to-page" region-data="page=8" style="top: 27%; left: 56%; width: 28%; height: 3%;"></div><div class="region  to-page" region-data="page=10" style="top: 34%; left: 56%; width: 25%; height: 3%;"></div><div class="region  to-page" region-data="page=12" style="top: 41%; left: 56%; width: 27%; height: 3%;"></div><div class="region  to-page" region-data="page=12" style="top: 48%; left: 56%; width: 15%; height: 3%;"></div><img src="pages/3.jpg" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px;"></div></div><div class="page-wrapper" page="1" style="position: absolute; overflow: hidden; width: 210px; height: 274px; top: 0px; right: 0px; left: auto; z-index: 12;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 345px; height: 345px; -webkit-transform-origin: 0% 100% 0px; -webkit-transform: translate(79px, 9px) rotate(-45deg);"><div class="page p1 odd" style="float: left; width: 210px; height: 274px; position: absolute; top: auto; left: 0px; bottom: 0px; right: auto; -webkit-transform-origin: 0% 100% 0px; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px; -webkit-transform: rotate(45deg) translate(-79px, -80px);"><div class="gradient"></div><div class="region  link" region-data="url=http%3A%2F%2Flatimes.com%2Fshopping%2Fvegas" style="top: 95%; left: 5%; width: 28%; height: 2%;"></div><img src="pages/1.jpg" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 210px; height: 274px; display: block; background-image: -webkit-gradient(linear, 100% 100%, 85.7142857142857% 89.051094890511%, color-stop(0.6, rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0.298039)), to(rgba(0, 0, 0, 0)));"></div></div></div>
+  </div>
+</div>
+
+<!-- Thumbnails -->
+<div class="thumbnails" style="height: 1px; display: block;">
+  <div>
+    <ul>
+      <li class="i current">
+        <img src="pages/1-thumb.jpg" width="76" height="100" class="page-1">
+        <span>1</span>
+      </li>
+      <li class="d">
+        <img src="pages/2-thumb.jpg" width="76" height="100" class="page-2">
+        <img src="pages/3-thumb.jpg" width="76" height="100" class="page-3">
+        <span>2-3</span>
+      </li>
+      <li class="d">
+        <img src="pages/4-thumb.jpg" width="76" height="100" class="page-4">
+        <img src="pages/5-thumb.jpg" width="76" height="100" class="page-5">
+        <span>4-5</span>
+      </li>
+      <li class="d">
+        <img src="pages/6-thumb.jpg" width="76" height="100" class="page-6">
+        <img src="pages/7-thumb.jpg" width="76" height="100" class="page-7">
+        <span>6-7</span>
+      </li>
+      <li class="d">
+        <img src="pages/8-thumb.jpg" width="76" height="100" class="page-8">
+        <img src="pages/9-thumb.jpg" width="76" height="100" class="page-9">
+        <span>8-9</span>
+      </li>
+      <li class="d">
+        <img src="pages/10-thumb.jpg" width="76" height="100" class="page-10">
+        <img src="pages/11-thumb.jpg" width="76" height="100" class="page-11">
+        <span>10-11</span>
+      </li>
+      <li class="i">
+        <img src="pages/12-thumb.jpg" width="76" height="100" class="page-12">
+        <span>12</span>
+      </li>
+    <ul>
+  <div> 
+</div>
+</ul></ul></div>
+
+<script type="text/javascript">
+
+function loadApp() {
+
+ $('#all').fadeIn(1000);
+  
+
+
+
+  // Create the flipbook
+
+  $('.magazine').turn({
+      
+      // Magazine width
+
+      width: 922,
+
+      // Magazine height
+
+      height: 600,
+
+      // Elevation will move the peeling corner this number of pixels by default
+
+      elevation: 50,
+      
+      // Hardware acceleration
+
+      acceleration: !isChrome(),
+
+      // Enables gradients
+
+      gradients: true,
+      
+      // Auto center this flipbook
+
+      autoCenter: true,
+
+      // The number of pages
+
+      pages: 12,
+
+
+      // Events
+      when: {
+
+      turning: function(event, page, view) {
+        
+        var book = $(this),
+        currentPage = book.turn('page'),
+        pages = book.turn('pages');
+    
+        // Update the current URI
+
+        Hash.go('page/' + page).update();
+
+
+        // Show and hide navigation buttons
+
+        disableControls(page);
+        
+
+        $('.thumbnails .page-'+currentPage).
+          parent().
+          removeClass('current');
+
+        $('.thumbnails .page-'+page).
+          parent().
+          addClass('current');
+
+      },
+
+      turned: function(event, page, view) {
+
+        disableControls(page);
+
+        $(this).turn('center');
+
+        if (page==1) { 
+          $(this).turn('peel', 'br');
+        }
+
+      },
+
+      missing: function (event, pages) {
+
+        // Add pages that aren't in the magazine
+
+        for (var i = 0; i < pages.length; i++)
+          addPage(pages[i], $(this));
+
+      }
+    }
+
+  });
+
+  // Zoom.js
+
+  $('.magazine-viewport').zoom({
+    flipbook: $('.magazine'),
+    max: function() { 
+      
+      return largeMagazineWidth()/$('.magazine').width();
+
+    }, 
+    when: {
+      tap: function(event) {
+
+        if ($(this).zoom('value')==1) {
+          $('.magazine').
+            removeClass('animated').
+            addClass('zoom-in');
+          $(this).zoom('zoomIn', event);
+        } else {
+          $(this).zoom('zoomOut');
+        }
+      },
+
+      resize: function(event, scale, page, pageElement) {
+
+        if (scale==1)
+          loadSmallPage(page, pageElement);
+        else
+          loadLargePage(page, pageElement);
+
+      },
+
+      zoomIn: function () {
+        
+        $('.thumbnails').hide();
+        $('.made').hide();
+        $('.magazine').addClass('zoom-in');
+
+        if (!window.escTip && !$.isTouch) {
+          escTip = true;
+
+          $('<div />', {'class': 'esc'}).
+            html('<div>Press ESC to exit</div>').
+              appendTo($('body')).
+              delay(2000).
+              animate({opacity:0}, 500, function() {
+                $(this).remove();
+              });
+        }
+      },
+
+      zoomOut: function () {
+
+        $('.esc').hide();
+        $('.thumbnails').fadeIn();
+        $('.made').fadeIn();
+
+        setTimeout(function(){
+          $('.magazine').addClass('animated').removeClass('zoom-in');
+          resizeViewport();
+        }, 0);
+
+      },
+
+      swipeLeft: function() {
+
+        $('.magazine').turn('next');
+
+      },
+
+      swipeRight: function() {
+        
+        $('.magazine').turn('previous');
+
+      }
+    }
+  });
+
+  // Using arrow keys to turn the page
+
+  $(document).keydown(function(e){
+
+    var previous = 37, next = 39, esc = 27;
+
+    switch (e.keyCode) {
+      case previous:
+
+        // left arrow
+        $('.magazine').turn('previous');
+        e.preventDefault();
+
+      break;
+      case next:
+
+        //right arrow
+        $('.magazine').turn('next');
+        e.preventDefault();
+
+      break;
+      case esc:
+        
+        $('.magazine-viewport').zoom('zoomOut');  
+        e.preventDefault();
+
+      break;
+    }
+  });
+
+  // URIs - Format #/page/1 
+
+  Hash.on('^page\/([0-9]*)$', {
+    yep: function(path, parts) {
+      var page = parts[1];
+
+      if (page!==undefined) {
+        if ($('.magazine').turn('is'))
+          $('.magazine').turn('page', page);
+      }
+
+    },
+    nop: function(path) {
+
+      if ($('.magazine').turn('is'))
+        $('.magazine').turn('page', 1);
+    }
+  });
+
+
+  $(window).resize(function() {
+    resizeViewport();
+  }).bind('orientationchange', function() {
+    resizeViewport();
+  });
+
+  // Events for thumbnails
+
+  $('.thumbnails').click(function(event) {
+    
+    var page;
+
+    if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+    
+      $('.magazine').turn('page', page[1]);
+    }
+  });
+
+  $('.thumbnails li').
+    bind($.mouseEvents.over, function() {
+      
+      $(this).addClass('thumb-hover');
+
+    }).bind($.mouseEvents.out, function() {
+      
+      $(this).removeClass('thumb-hover');
+
+    });
+
+  if ($.isTouch) {
+  
+    $('.thumbnails').
+      addClass('thumbanils-touch').
+      bind($.mouseEvents.move, function(event) {
+        event.preventDefault();
+      });
+
+  } else {
+
+    $('.thumbnails ul').mouseover(function() {
+
+      $('.thumbnails').addClass('thumbnails-hover');
+
+    }).mousedown(function() {
+
+      return false;
+
+    }).mouseout(function() {
+
+      $('.thumbnails').removeClass('thumbnails-hover');
+
+    });
+
+  }
+
+
+  // Regions
+
+  if ($.isTouch) {
+    $('.magazine').bind('touchstart', regionClick);
+  } else {
+    $('.magazine').click(regionClick);
+  }
+
+  // Events for the next button
+
+  $('.next-button').bind($.mouseEvents.over, function() {
+    
+    $(this).addClass('next-button-hover');
+
+  }).bind($.mouseEvents.out, function() {
+    
+    $(this).removeClass('next-button-hover');
+
+  }).bind($.mouseEvents.down, function() {
+    
+    $(this).addClass('next-button-down');
+
+  }).bind($.mouseEvents.up, function() {
+    
+    $(this).removeClass('next-button-down');
+
+  }).click(function() {
+    
+    $('.magazine').turn('next');
+
+  });
+
+  // Events for the next button
+  
+  $('.previous-button').bind($.mouseEvents.over, function() {
+    
+    $(this).addClass('previous-button-hover');
+
+  }).bind($.mouseEvents.out, function() {
+    
+    $(this).removeClass('previous-button-hover');
+
+  }).bind($.mouseEvents.down, function() {
+    
+    $(this).addClass('previous-button-down');
+
+  }).bind($.mouseEvents.up, function() {
+    
+    $(this).removeClass('previous-button-down');
+
+  }).click(function() {
+    
+    $('.magazine').turn('previous');
+
+  });
+
+
+  resizeViewport();
+
+  $('.magazine').addClass('animated');
+
+}
+
+
+ $('#all').hide();
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+  test : Modernizr.csstransforms,
+  yep: ['../../lib/turn.min.js'],
+  nope: ['../../lib/turn.html4.min.js'],
+  both: ['../../lib/zoom.min.js'],
+  complete: loadApp
+});
+
+</script>
+
+
+
+
+</div></body></html>

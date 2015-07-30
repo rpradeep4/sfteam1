@@ -1,0 +1,252 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <title>Page Title</title> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-table/src/bootstrap-table.css">
+    <link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+    <link rel="stylesheet" href="assets/examples.css">
+    <script src="assets/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap-table/src/bootstrap-table.js"></script>
+    <script src="bootstrap-table/src/extensions/export/bootstrap-table-export.js"></script>
+    <script src="//rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js"></script>
+    <script src="/bootstrap-table/src/extensions/editable/bootstrap-table-editable.js"></script>
+    <script src="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <script src="js/ga.js"></script>
+</head> 
+<body> 
+
+
+<button type="button" id = "butt">show</button>
+
+<div data-role="PAGE" id="page1" >
+
+    <div data-role="header">
+        <h1>Performance </h1>
+    </div><!-- /header -->
+
+    <div data-role="content">    
+
+        <a href="table_try.html" data-role="button" data-theme="c" data-mini="true" id="change" data-transition="FLIP" data-direction="reverse">BACK</a>
+       
+    </div><!-- /content -->
+
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="dialog" id="page2" >
+
+    <div data-role="header">
+        <h1>HOLDINGS</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">   
+
+        <title>Bootstrap Table Examples</title>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.min.js"></script>
+    <![endif]-->
+
+
+
+        <p><a href="file:///Users/roshnipradeep/Desktop/ProductComparison/table_try.html" data-role="button" data-theme="c" data-mini="true" id="change" data-transition="FLIP" data-direction="reverse">BACK</a></p>        
+    </div><!-- /content -->
+
+</div><!-- /page -->
+<script>
+
+$(document).ready(function(){
+
+    $("#butt").click(function(){
+    //$("#page1").show();
+    //$("#page2").show();
+
+});
+    
+});
+
+</script>
+
+<script>
+    var $table = $('#table'),
+        $remove = $('#remove'),
+        selections = [];
+    $(function () {
+        $table.bootstrapTable({
+            height: getHeight(),
+            columns: [
+                [
+                    {
+                        field: 'state',
+                        checkbox: true,
+                        rowspan: 2,
+                        align: 'center',
+                        valign: 'middle'
+                    }, {
+                        title: 'Item ID',
+                        field: 'id',
+                        rowspan: 2,
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }, {
+                        title: 'Item Detail',
+                        colspan: 3,
+                        align: 'center'
+                    }
+                ],
+                [
+                    {
+                        field: 'name',
+                        title: 'Item Name',
+                        sortable: true,
+                        editable: true,
+                        footerFormatter: totalNameFormatter,
+                        align: 'center'
+                    }, {
+                        field: 'price',
+                        title: 'Item Price',
+                        sortable: true,
+                        align: 'center',
+                        editable: {
+                            type: 'text',
+                            title: 'Item Price',
+                            validate: function (value) {
+                                value = $.trim(value);
+                                if (!value) {
+                                    return 'This field is required';
+                                }
+                                if (!/^$/.test(value)) {
+                                    return 'This field needs to start width $.'
+                                }
+                                var data = $table.bootstrapTable('getData'),
+                                    index = $(this).parents('tr').data('index');
+                                console.log(data[index]);
+                                return '';
+                            }
+                        },
+                        footerFormatter: totalPriceFormatter
+                    }, {
+                        field: 'operate',
+                        title: 'Item Operate',
+                        align: 'center',
+                        events: operateEvents,
+                        formatter: operateFormatter
+                    }
+                ]
+            ]
+        });
+        // sometimes footer render error.
+        setTimeout(function () {
+            $table.bootstrapTable('resetView');
+        }, 200);
+        $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+            $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+            // save your data, here just save the current page
+            selections = getIdSelections();
+            // push or splice the selections if you want to save all data selections
+        });
+        $table.on('expand-row.bs.table', function (e, index, row, $detail) {
+            if (index % 2 == 1) {
+                $detail.html('Loading from ajax request...');
+                $.get('LICENSE', function (res) {
+                    $detail.html(res.replace(/\n/g, '<br>'));
+                });
+            }
+        });
+        $table.on('all.bs.table', function (e, name, args) {
+            console.log(name, args);
+        });
+        $remove.click(function () {
+            var ids = getIdSelections();
+            $table.bootstrapTable('remove', {
+                field: 'id',
+                values: ids
+            });
+            $remove.prop('disabled', true);
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    });
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.id
+        });
+    }
+    function responseHandler(res) {
+        $.each(res.rows, function (i, row) {
+            row.state = $.inArray(row.id, selections) !== -1;
+        });
+        return res;
+    }
+    function detailFormatter(index, row) {
+        var html = [];
+        $.each(row, function (key, value) {
+            html.push('<p><b>' + key + ':</b> ' + value + '</p>');
+        });
+        return html.join('');
+    }
+    function operateFormatter(value, row, index) {
+        return [
+            '<a class="like" href="javascript:void(0)" title="Like">',
+            '<i class="glyphicon glyphicon-heart"></i>',
+            '</a>  ',
+            '<a class="remove" href="javascript:void(0)" title="Remove">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</a>'
+        ].join('');
+    }
+    window.operateEvents = {
+        'click .like': function (e, value, row, index) {
+            alert('You click like action, row: ' + JSON.stringify(row));
+        },
+        'click .remove': function (e, value, row, index) {
+            $table.bootstrapTable('remove', {
+                field: 'id',
+                values: [row.id]
+            });
+        }
+    };
+    function totalTextFormatter(data) {
+        return 'Total';
+    }
+    function totalNameFormatter(data) {
+        return data.length;
+    }
+    function totalPriceFormatter(data) {
+        var total = 0;
+        $.each(data, function (i, row) {
+            total += +(row.price.substring(1));
+        });
+        return '$' + total;
+    }
+    function getHeight() {
+        return $(window).height() - $('h1').outerHeight(true);
+    }
+</script>
+
+
+
+</body>
+</html>

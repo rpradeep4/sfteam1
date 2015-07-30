@@ -1,0 +1,74 @@
+<style>
+
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+</style>
+
+
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+      <!-- front content -->
+                  <h3 class="product__title"><STRONG>ETF1</STRONG></h3>
+                  <img class="product__image" src="images/44.png" alt="Product 1" />
+                  <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+
+
+
+      
+    </div>
+    <div class="back">
+      <!-- back content -->
+      <a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td>
+                        <span class="product__year extra highlight">2011</span>
+                        <span class="product__region extra highlight">Douro</span>
+                        <span class="product__varietal extra highlight">Touriga Nacional</span>
+                        <span class="product__alcohol extra highlight">13%</span>
+                        <span class="product__price highlight">$55.90</span>
+
+
+      
+    </div>
+  </div>
+</div>

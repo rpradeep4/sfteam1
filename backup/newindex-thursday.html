@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>ETF Comparison Cart</title>
+		<p><div><h1> </h1></div></p>
+		<meta name="description" content="Blueprint: A basic responsive product grid layout with comparison functionality" />
+		<meta name="keywords" content="blueprint, template, html, css, javascript, grid, layout, effect, product comparison" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="http://cdn.productchart.com/elements/objects/styles.css">
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.3.min.css" />-->
+		<!--<script src="js/jquery.mobile-1.4.3.min.js"></script>-->
+       <script src="js/jquery-1.11.3.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+    
+		<link rel="stylesheet" type="text/css" href="css/toggle.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css" />
+
+   
+    
+		<!-- Modernizr is used for flexbox fallback -->
+		<script src="js/modernizr.custom.js"></script>
+		<!--<script src="js/flexscroll.js"></script>-->
+		<script src="js/bootstrap-slider.js"></script>
+		<script type="text/javascript" src="js/slideout.min.js"></script>
+
+	</head>
+	<body>
+		<!-- Compare basket -->
+		<div class="compare-basket">
+			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
+		</div>
+		<!-- Main view -->
+		<div class="view">
+			<!-- Blueprint header -->
+			<header class="bp-header cf">
+				<span>Blueprint <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<h1>Product Comparison Layout &amp; Effect</h1>
+				<nav>
+					<a href="http://tympanus.net/Blueprints/GridGallery/" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
+					<!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
+					<a href="http://tympanus.net/codrops/?p=24096" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
+					<a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Go to the archive</span></a>
+				</nav>
+			</header>
+			<!-- Product grid -->
+			<section class="grid">
+				<!-- Products -->
+
+				<div id = "myDiv" class="product" style="display:inline">
+					<div id = "myDiv" class="product__info" >
+						<div id = "myDiv" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
+						  <div id = "myDiv" class="flipper">
+						    <div id = "myDiv" class="front">
+						      <!-- front content -->
+						      <h3 class="product__title"><STRONG>ETF1</STRONG></h3>
+						      <img class="product__image" src="images/1.png" alt="Product 1" />
+						     
+						    </div>
+						    
+						    <div id = "myDiv" class="back">
+						      <!-- back content -->
+						      					 
+						      
+												
+
+												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												<br><br><br>
+
+												
+												<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+												<!--<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>-->
+												
+												<button id = "cart" class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+												<button id = "mod" class="action action--button action--buy" data-toggle = "modal" target="#myModal"><i class="fa fa-shopping-cart"></i><span class="action__text">modal</span></button>
+
+
+							</div>
+
+											
+						</div>
+					</div>
+				</div>
+			</div>
+				
+
+				<!--2nd-->
+
+				<div id = "myDiv2" class="product">
+					<div id = "myDiv2" class="product__info" >
+						<div id = "myDiv2" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						  <div id = "myDiv2" class="flipper">
+						    <div id = "myDiv2" class="front">
+						      <!-- front content -->
+						      <h3 class="product__title"><STRONG>ETF1</STRONG></h3>
+						      <img class="product__image" src="images/2.png" alt="Product 1" />
+						     
+						    </div>
+						    
+						    <div id = "myDiv2" class="back">
+						      <!-- back content -->
+						      					 
+						      
+												
+						      					<br><br><br>
+												
+
+												<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>
+												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												<br><br><br>
+												
+												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+
+
+							</div>
+
+											
+						</div>
+					</div>
+				</div>
+			</div> 
+
+				<!--3rd-->
+				<div id = "myDiv3" class="product">
+					<div id = "myDiv3" class="product__info" >
+						<div id = "myDiv3" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
+						  <div id = "myDiv3" class="flipper">
+						    <div id = "myDiv3" class="front">
+						      <!-- front content -->
+						      <h3 class="product__title"><STRONG>ETF1</STRONG></h3>
+						      <img class="product__image" src="images/3.png" alt="Product 1" />
+						     
+						    </div>
+						    
+						    <div id = "myDiv3" class="back">
+						      <!-- back content -->
+						      					 
+						      
+												
+
+												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												<br><br><br>
+
+												<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>
+												
+												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+-->
+
+
+							</div>
+
+											
+						</div>
+					</div>
+				</div>
+			</div> 
+				<!--4-->
+				<div id = "myDiv4" class="product">
+					<div id = "myDiv4" class="product__info" >
+						<div id = "myDiv4" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						  <div id = "myDiv4" class="flipper">
+						    <div id = "myDiv4" class="front">
+						      <!-- front content -->
+						      <h3 class="product__title"><STRONG>ETF1</STRONG></h3>
+						      <img class="product__image" src="images/4.png" alt="Product 1" />
+						     
+						    </div>
+						    
+						    <div id = "myDiv4" class="back">
+						      <!-- back content -->
+						      					 
+						      
+												
+
+												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												<br><br><br>
+
+												<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>
+												
+												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+
+
+							</div>
+
+											
+						</div>
+					</div>
+				</div>
+			</div> 
+				<!--5-->
+				<div id = "myDiv5" class="product">
+					<div id = "myDiv5" class="product__info" >
+						<div id = "myDiv5" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
+						  <div id = "myDiv5" class="flipper">
+						    <div id = "myDiv5" class="front">
+						      <!-- front content -->
+						      <h3 class="product__title"><STRONG>ETF1</STRONG></h3>
+						      <img class="product__image" src="images/5.png" alt="Product 1" />
+						     
+						    </div>
+						    
+						    <div id = "myDiv5" class="back">
+						      <!-- back content -->
+						      					 
+						      
+												
+
+												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												<br><br><br>
+
+												<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>
+												
+												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+
+
+							</div>
+
+											
+						</div>
+					</div>
+				</div>
+			</div> 
+
+				<!--6->
+
+				
+
+
+
+
+				<!--7-->
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/7.png" alt="Product 7" />
+						<h3 class="product__title">Clarendon Hills Astralis</h3>
+						<span class="product__year extra highlight">2006</span>
+						<span class="product__region extra highlight">McLaren Vale</span>
+						<span class="product__varietal extra highlight">Syrah, Shiraz</span>
+						<span class="product__alcohol extra highlight">12%</span>
+						<span class="product__price highlight">$153.90</span>
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/8.png" alt="Product 8" />
+						<h3 class="product__title">Lapostolle Clos Apalta</h3>
+						<span class="product__year extra highlight">2010</span>
+						<span class="product__region extra highlight">Chile</span>
+						<span class="product__varietal extra highlight">Bordeaux</span>
+						<span class="product__alcohol extra highlight">12%</span>
+						<span class="product__price highlight">$82.90</span>
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/9.png" alt="Product 9" />
+						<h3 class="product__title">Bodega Colome Reserva</h3>
+						<span class="product__year extra highlight">2009</span>
+						<span class="product__region extra highlight">Argentina</span>
+						<span class="product__varietal extra highlight">Malbec</span>
+						<span class="product__alcohol extra highlight">13%</span>
+						<span class="product__price highlight">$99.90</span>
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/10.png" alt="Product 10" />
+						<h3 class="product__title">Montevertine Le Pergole Torte</h3>
+						<span class="product__year extra highlight">2011</span>
+						<span class="product__region extra highlight">Tuscany</span>
+						<span class="product__varietal extra highlight">Sangiovese </span>
+						<span class="product__alcohol extra highlight">12%</span>
+						<span class="product__price highlight">$119.90</span>
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/2.png" alt="Product 11" />
+						<h3 class="product__title">Massolino Vigna Parussi Barolo</h3>
+						<span class="product__year extra highlight">2009</span>
+						<span class="product__region extra highlight">Piedmont</span>
+						<span class="product__varietal extra highlight">Nebbiolo</span>
+						<span class="product__alcohol extra highlight">12%</span>
+						<span class="product__price highlight">$169.90</span>
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/4.png" alt="Product 12" />
+						<h3 class="product__title">Chateau Branaire-Ducru</h3>
+						<span class="product__year extra highlight">2009</span>
+						<span class="product__region extra highlight">St-Julien, Bordeaux</span>
+						<span class="product__varietal extra highlight">Bordeaux</span>
+						<span class="product__alcohol extra highlight">13%</span>
+						<span class="product__price highlight">$99.90</span>
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+			</section>
+		</div><!-- /view -->
+		<!-- product compare wrapper -->
+		<section class="compare">
+			<button class="action action--close"><i class="fa fa-remove"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
+		</section>
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>ETF Comparison Cart</title>
+		<p><div><h1> </h1></div></p>
+		<meta name="description" content="Blueprint: A basic responsive product grid layout with comparison functionality" />
+		<meta name="keywords" content="blueprint, template, html, css, javascript, grid, layout, effect, product comparison" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="http://cdn.productchart.com/elements/objects/styles.css">
+		<!--side bar -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo_dd.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/bottom-area.css" />
+		<script src="js/modernizr.custom_dd.js"></script>
+		<script src="js/draggabilly.pkgd.min.js"></script>
+		<script src="js/dragdrop.js"></script>
+		
+		<!--carousal -->
+		 <!-- Example assets -->
+        <link rel="stylesheet" type="text/css" href="jcarousel.responsive.css">
+         <script src="js/jquery-1.11.3.min.js"></script>
+         <script src="js/bootstrap.js"></script>
+           <script src="js/bootstrap.min.js"></script>
+       <!-- <script type="text/javascript" src="../../libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../../dist/jquery.jcarousel.min.js"></script>-->
+
+        <script type="text/javascript" src="jcarousel.responsive.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+		<script type='text/javascript' src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"> </script>
+
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.3.min.css" />-->
+		<!-- dad -->
+		 <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/demo_drag.css">
+    <link rel="stylesheet" href="css/jquery.dad.css">
+	<!--	 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>-->
+		<!--<script src="js/jquery.mobile-1.4.3.min.js"></script>-->
+      
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>-->
+
+     
+    
+		<link rel="stylesheet" type="text/css" href="css/toggle.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css" />
+
+   
+    
+		<!-- Modernizr is used for flexbox fallback -->
+		<script src="js/modernizr.custom.js"></script>
+		<!--<script src="js/flexscroll.js"></script>-->
+		<script src="js/bootstrap-slider.js"></script>
+		<script type="text/javascript" src="js/slideout.min.js"></script>
+		<!--setting -->
+		
+		<script src="js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery.smartmenus.min.js"></script>
+		<script type="text/javascript" src="js/jquery.smartmenus.bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+		<script type="text/javascript" src="js/jflickrfeed.js"></script>
+		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+		
+		<script type="text/javascript" src="js/jquery-scrolltofixed-min.js"></script>
+		<!-- drag -->
+	
+	</head>
+	<body>
+		<!-- Compare basket -->
+		<div class="compare-basket">
+			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
+		</div>
+		<!-- Main view -->
+		<div class="view">
+			<!-- Blueprint header -->
+			<header class="bp-header cf">
+
+				<span> DRAG ETF CARD TO RIGHT FOR TOOLS AND DOWN FOR CDX/TRS/FUTURES </span>
+				<h1>ETF Comparison Cart</h1>
+				<nav>
+					<a href="http://tympanus.net/Blueprints/GridGallery/" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Show List of ETF's</span></a>
+					<a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-
+					<a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Done</span></a>
+					<nav class="codrops-demos">
+						<a href="DROP_COMPARE.html">USE TOOLS</a>
+						<a href="COMPARE_BOARD.html">COMPARISON BUCKETS</a>
+						
+					</nav>
+				</nav>
+			</header>
+<!-- filters -->
+
+ <button id ="filter" type="button" class="btn btn-primary butt" >FILTER</button>
+<button id ="tools" type="button" class="btn btn-primary butt" onclick = "tools()">USE TOOLS</button>
+<button id ="cdx" type="button" class="btn btn-primary butt" onclick = "cdx()" >COMPARE WITH CDX</button>
+<div id = "car" style = "display:none" class="wrapper">
+           
+          
+
+            <div id = "car" class="jcarousel-wrapper">
+                <div id = "car"  class="jcarousel">
+                    <ul>
+                        <li>  <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>YIELD</li>
+                        <li> </li>
+                        <li></li>
+                        <li>  <input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>BID ASK SPREAD</li>
+                        <li></li>
+                         <li> </li>
+                        <li><INPUT type="checkbox">EMERGING MARKET</li>
+                        <li></li>
+                         <li> </li>
+                         <li><INPUT id = "rec" type="checkbox">RECENT SEARCHES</li>
+                        <li></li>
+                         <li> </li>
+                          <li><INPUT id = "rec" type="search" placeholder="Type ETF Name">SEARCH</li>
+                          <li></li>
+                         <li> </li>
+
+
+                        <li>Filter by price interval: <b> 10</b> <input id="ex3" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b> 1000</b></li>
+                          <li> </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+               <!--<p class="jcarousel-pagination"></p>-->
+            </div>
+        </div>
+
+
+
+
+		
+
+		
+			
+<!--done filters-->
+
+<!--recent carousel-->
+<div id = "car_rec" style = "display:none" class="wrapper">
+           
+          
+
+            <div id = "car_rec" class="jcarousel-wrapper">
+                <div id = "car_rec"  class="jcarousel">
+                    <ul>
+                        <li></li>
+                        <li> <img src="images/1.png" style = "width-250px"></li>
+                        <li></li>
+                         <li> <img src="images/2.png" style = "width-250px"></li>
+                       
+                        <li></li>
+                         <li> <img src="images/3.png" style = "width-250px"></li>
+                         <li> </li>
+                       
+                       
+                          <li> </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+               <!--<p class="jcarousel-pagination"></p>-->
+            </div>
+        </div>
+
+        <!-- drag drop -->
+    
+<div id="grid" class="grid clearfix">
+					<div class="grid__item butt">
+						<kbd>ETF1</KBD> <i class="fa fa-fw fa-file-text-o"></i></div>
+					<div class="grid__item butt"><kbd>ETF2</KBD><i class="fa fa-fw fa-file-text-o"></i></div>
+					<div class="grid__item butt"><kbd>ETF3</KBD><i class="fa fa-fw fa-file-text-o"></i></div>
+					<div class="grid__item butt"><kbd>ETF4</KBD><i class="fa fa-fw fa-file-text-o"></i></div>
+					<div class="grid__item butt"><kbd>ETF5</KBD><i class="fa fa-fw fa-file-text-o"></i></div>
+					<div class="grid__item butt"><kbd>ETF6</KBD><i class="fa fa-fw fa-file-text-o"></i></div>
+					<div class="grid__item butt"><kbd>ETF7</KBD><i class="fa fa-fw fa-file-text-o"></i></div>
+					
+					
+					
+				</div>
+<div id="drop-area" class="drop-area">
+			<div>
+				<div class="drop-area__item">DROP HERE FOR <BR> IRIS TOOL<div class="dummy"></div></div>
+				<div class="drop-area__item">DROP HERE FOR <BR> WHAT IF??<div class="dummy"></div></div>
+				<div class="drop-area__item">DROP HERE FOR <BR> PRE-TRADE TOOL<div class="dummy"></div></div>
+				<div class="drop-area__item"><div class="dummy"></div></div>
+				<div class="drop-area__item"><div class="dummy"></div></div>
+				<div class="drop-area__item"><div class="dummy"></div></div>
+				<div class="drop-area__item"><div class="dummy"></div></div>
+				<div class="drop-area__item"><div class="dummy"></div></div>
+			</div>
+		</div>-->
+<!--bottom drop -->
+
+<div id="drop-area1" class="drop-area1">
+			<div>
+				<div class="dummy"></div>
+				<div class="drop-area1__item">WHY ETF BETTER THAN CDX <BR> ? <i class="fa fa-fw fa-file-excel-o"></i></div>
+				<div class="drop-area1__item">WHY ETF BETTER THAN TRS <BR> ?<i class="fa fa-fw fa-file-pdf-o"></i></div>
+				
+				<div class="drop-area1__item">WHY ETF BETTER THAN FUTURES <BR> ?<i class="fa fa-fw fa-file-archive-o"></i></div>
+				
+				
+			</div>
+		</div>
+		<div class="drop-overlay1"></div>
+
+<!--MODAL CONTENT -->
+
+<!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title"><KBD>ETF NAME</KBD></h3> 
+        <img src="images/pdf.png" alt="graph here" style="width:404px;height:58px;">
+      </div>
+      <div class="modal-body">
+       
+        	<button type="button" style ="display:inline" class="btn btn-info btn-lg butt" id = "butt">WHY THIS ETF</button>
+        	<button type="button" style ="display:inline" class="btn btn-primary btn-lg butt "id = "butt1">CHART & RETURNS</button>
+        	
+        	<button type="button" style ="display:inline" id = "butt3" class="btn btn-danger btn-lg butt">DISTRIBUTIONS</button>
+        	<button type="button" style ="display:inline" id = "butt4" class="btn btn-info btn-lg butt">PREMIUM DISCOUNT
+        	</button>
+        	<button type="button" style ="display:inline" id = "butt5" class="btn btn-warning btn-lg butt">HOLDINGS
+        	</button>
+
+        	<div class="flip-container-1" id = "img_chart" style="display:none" ontouchstart="this.classList.toggle('hover1');">
+        	<img src="images/g1.png" alt="graph here" style="width:704px;height:458px;">
+        </div>
+        	
+        	<div data-role="PAGE" id="page1" style ="display:none">
+
+			    <div data-role="header">
+			        <h1>DETAILS ABOUT THIS </h1>
+			    </div><!-- /header -->
+
+			    <div data-role="content">    
+			       
+			    	
+			    </div><!-- /content -->
+
+
+					    <div data-role="footer">
+					        <h4>Page Footer</h4>
+					    </div><!-- /footer -->
+				</div>
+
+				<div data-role="PAGE"  id="body" style ="display:none">
+					<div data-role="header">
+			        <h1>SEE TOP ISSUERS</h1>
+			    </div><!-- /header -->
+			     <div data-role="content">  
+			     	 </div><!-- /content -->
+				</div>
+
+
+      
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+    </div><!--body-->
+
+  </div><!--content-->
+</div><!--mlg-->
+</div><!--modal-->
+
+
+
+<!--FINISH MODAL-->
+
+<!--side bar -->
+
+		</div><!-- /view -->
+
+		
+
+<!--finish bar -->
+
+		<!-- product compare wrapper -->
+		<section class="compare">
+			<button class="action action--close"><i class="fa fa-remove"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
+		</section>
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+
+		<!--sliders -->
+
+		<script>
+			var slider = new Slider('#ex1', {
+			formatter: function(value) {
+				
+
+			return 'Current value: ' + value;}
+		});
+		</script>
+
+		<script>
+		$("#butt,#butt2,#butt3,#butt4").click(function(){
+    $("#page1").slideToggle('slow');
+    //$("#page1").slideToggle('slow');
+    //$("#page2").show();
+
+});
+		$("#butt1").click(function(){
+			$("#img_chart").slideToggle('slow');
+
+		});
+
+		$("#butt5").click(function(){
+			$("#body").slideToggle('slow');
+
+		});
+		</script>
+
+		<script>
+		$('#ex1Slider').change(function(){
+			//$('div').shuffle();
+			$('div#myDiv3').shuffle();
+			//$('div#myDiv4').shuffle();
+		//$('div#myDiv2').hide();
+		$('div#myDiv3').hide();
+		$('div#myDiv4').hide();
+		$('div#myDiv5').hide();
+		$('div#myDiv6').hide();
+		$('div#myDiv7').hide();
+		//$('div#myDiv8').hide();
+		console.log("hiding");
+			//$('#myDiv').appendTo('body');*/
+
+	});
+		</script>
+
+
+		<script>
+		$('#ex2Slider').change(function(){
+			$('div').shuffle();
+		$('div#myDiv2').hide();
+		$('div#myDiv3').hide();
+		//$('div#rest').hide();
+		
+		//$('div#myDiv4').hide();
+		
+		//console.log("hiding");
+			//$('#myDiv').appendTo('body');
+
+	});</script>
+
+		<script>
+		$('#ex3Slider').change(function(){
+			$('div#rest').shuffle();
+		//$('div#myDiv2').hide();
+		//$('div#myDiv3').hide();
+		/*$('div#myDiv4').hide();
+		$('div#myDiv5').hide();
+		$('div#myDiv6').hide();
+		//$('div#myDiv7').hide();
+		$('#div#myDiv7').cycle({
+			fy: 'shuffle',
+			easing : 'easeOutBack',
+			delay : -4000
+		});
+		$('div#myDiv8').hide();*/
+		
+			//$('#myDiv').appendTo('body');
+
+	});
+		</script>
+		<script>
+$(document).ready(function(){
+	 //$("div#drop-area").slideToggle("slow");
+	  $("div#grid").show();
+	$("div#drag_drop").hide();
+	//$("div#drop-area").hide();
+	//$("div#drop-area1").hide();
+
+	//$("#grid").hide();
+	$("#filter").click(function(){
+		//$("#car").show();
+    $("#car").slideToggle("slow");
+});
+
+	$("#rec").click(function(){
+		//$("#car").show();
+    $("#car_rec").slideToggle("slow");
+});
+/*$("#tools").click(function(){
+		//$("#car").show();
+		//console.log("click tool");
+    $("div#grid").slideToggle("slow");
+     $("div#drop-area").slideToggle("slow");
+
+});
+$("#cdx").click(function(){
+		//$("#car").show();
+		//console.log("click tool");
+    $("div#grid").slideToggle("slow");
+     $("div#drop-area1").slideToggle("slow");
+
+});*/
+
+	
+	$("#ex2").slider({});
+
+
+  
+
+   });
+
+	</script>
+
+
+<script>
+
+
+(function($){
+ 
+    $.fn.shuffle = function() {
+ 
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+ 
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+ 
+        return $(shuffled);
+ 
+    };
+ 
+})(jQuery);
+
+
+
+	
+	</script>
+
+	<!--force graph -->
+
+	<script type="application/json" id="mis">
+  
+
+
+</script>
+	<script>
+
+//Constants for the SVG
+
+ 
+
+</script>
+
+<!--<acript>-->
+
+	<!--</script>-->
+	<!-- drag drop -->
+	
+	<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dad.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script>
+    $(function(){
+        $('html').niceScroll({cursorcolor:"#639BF6",cursorwidth :10, cursorborder: 'none'});
+        //dad simple demo
+        $('.dad').dad();
+        //dad dropzone
+        var d=$('.dad2').dad();
+        d.addDropzone('.dropzone',function(e){
+            e.remove();
+        });
+        //dad activate and deactivate
+        $('.act').on('click',function(){
+            $('.btndemo').not(this).removeClass('active');
+            $(this).addClass('active');
+            d.css('opacity',1);
+            d.activate();
+        });
+        $('.deact').on('click',function(){
+            $('.btndemo').not(this).removeClass('active');
+            $(this).addClass('active');
+            d.css('opacity',0.5);
+            d.deactivate();
+        });
+
+
+        $(".dad-draggable").dad({draggable:'.draggable'})
+
+    })
+	</script>
+	<!--side bar -->
+	
+		<script>
+			(function tools() {
+				var body = document.body,
+					dropArea = document.getElementById( 'drop-area' ),
+					droppableArr = [], dropAreaTimeout;
+
+				// initialize droppables
+				[].slice.call( document.querySelectorAll( '#drop-area .drop-area__item' )).forEach( function( el ) {
+					droppableArr.push( new Droppable( el, {
+						onDrop : function( instance, draggableEl ) {
+							// show checkmark inside the droppabe element
+							//$(ui.instance).find('.link-to-open').click()
+							 $(this).addClass( "ui-state-highlight" );  
+       // $( "#cornDialog" ).dialog( "open" ); 
+
+    alert("Dropped into tool box!");
+							classie.add( instance.el, 'drop-feedback' );
+							clearTimeout( instance.checkmarkTimeout );
+							instance.checkmarkTimeout = setTimeout( function() { 
+								classie.remove( instance.el, 'drop-feedback' );
+							}, 800 );
+							// ...
+						}
+					} ) );
+				} );
+
+			
+
+				// initialize draggable(s)
+				[].slice.call(document.querySelectorAll( '#grid .grid__item' )).forEach( function( el ) {
+					new Draggable( el, droppableArr, {
+						scroll : true,
+						scrollable : '#drop-area',
+						scrollSpeed : 40,
+						scrollSensitivity : 50,
+						draggabilly : { containment: document.body },
+						onStart : function() {
+							// add class 'drag-active' to body
+							classie.add( body, 'drag-active' );
+							// clear timeout: dropAreaTimeout (toggle drop area)
+							clearTimeout( dropAreaTimeout );
+							// show dropArea
+							classie.add( dropArea, 'show' );
+						},
+						onEnd : function( wasDropped ) {
+							var afterDropFn = function() {
+								// hide dropArea
+								classie.remove( dropArea, 'show' );
+								// remove class 'drag-active' from body
+								classie.remove( body, 'drag-active' );
+							};
+
+							if( !wasDropped ) {
+								afterDropFn();
+							}
+							else {
+								// after some time hide drop area and remove class 'drag-active' from body
+								clearTimeout( dropAreaTimeout );
+								dropAreaTimeout = setTimeout( afterDropFn, 400 );
+								
+							}
+						}
+					} );
+				} );
+			})();
+		</script>
+
+		<!--bottom-->
+		<script>
+			//(function() {
+				(function cdx(){
+				var body = document.body,
+					dropArea = document.getElementById( 'drop-area1' ),
+					droppableArr = [], dropAreaTimeout;
+
+				// initialize droppables
+				[].slice.call( document.querySelectorAll( '#drop-area1 .drop-area1__item' )).forEach( function( el ) {
+					droppableArr.push( new Droppable( el, {
+						onDrop : function( instance, draggableEl ) {
+							// show checkmark inside the droppabe element
+							//$(ui.instance).find('.link-to-open').click()
+							// $(this).addClass( "ui-state-highlight" );  
+       // $( "#cornDialog" ).dialog( "open" ); 
+
+    alert("This will show CDX VS ETF!");
+							classie.add( instance.el, 'drop-feedback1' );
+							clearTimeout( instance.checkmarkTimeout );
+							instance.checkmarkTimeout = setTimeout( function() { 
+								classie.remove( instance.el, 'drop-feedback1' );
+							}, 800 );
+							// ...
+						}
+					} ) );
+				} );
+
+			
+
+				// initialize draggable(s)
+				[].slice.call(document.querySelectorAll( '#grid .grid__item' )).forEach( function( el ) {
+					new Draggable( el, droppableArr, {
+						scroll : true,
+						scrollable : '#drop-area1',
+						scrollSpeed : 40,
+						scrollSensitivity : 50,
+						draggabilly : { containment: document.body },
+						onStart : function() {
+							// add class 'drag-active' to body
+							classie.add( body, 'drag-active' );
+							// clear timeout: dropAreaTimeout (toggle drop area)
+							clearTimeout( dropAreaTimeout );
+							// show dropArea
+							classie.add( dropArea, 'show' );
+						},
+						onEnd : function( wasDropped ) {
+							var afterDropFn = function() {
+								// hide dropArea
+								classie.remove( dropArea, 'show' );
+								// remove class 'drag-active' from body
+								classie.remove( body, 'drag-active' );
+							};
+
+							if( !wasDropped ) {
+								afterDropFn();
+							}
+							else {
+								// after some time hide drop area and remove class 'drag-active' from body
+								clearTimeout( dropAreaTimeout );
+								dropAreaTimeout = setTimeout( afterDropFn, 400 );
+								
+							}
+						}
+					} );
+				} );
+			})();
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,360 @@
+<!--
+
+			<div class="settings">
+
+<style>
+
+.tooltip .name
+{
+ height: auto;
+ overflow: visible;
+ font-weight: 400;
+}
+
+.tooltip .details
+{
+ padding: 5px;
+ text-align: center;
+}
+
+.item
+{
+ background-position: 50% 50%;
+ background-size: auto 90%;
+ background-repeat: no-repeat;
+ background-color: #fff;
+}
+
+.settings
+{
+ font-size: 16px;
+}
+
+</style>
+
+<style type="text/css"></style><style>@-webkit-keyframes poplbofsouygbxrsejcvemzdikgzyrtgyipqfr {50% {-webkit-transform:scale(1.2);}100% {-webkit-transform:scale(1);}}@keyframes poplbofsouygbxrsejcvemzdikgzyrtgyipqfr {50% {-webkit-transform:scale(1.2);transform:scale(1.2);}100% {-webkit-transform:scale(1);transform:scale(1);}}#lbofsouygbxrsejcvemzdikgzyrtgyipqfr{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.lbofsouygbxrsejcvemzdikgzyrtgyipqfr-blocked{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;color:#AAA !important;display:inline !important;text-decoration:line-through !important;}#lbofsouygbxrsejcvemzdikgzyrtgyipqfr br{display:block !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#lbofsouygbxrsejcvemzdikgzyrtgyipqfr span{background:transparent !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#lbofsouygbxrsejcvemzdikgzyrtgyipqfr div{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#lbofsouygbxrsejcvemzdikgzyrtgyipqfr a{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}a#lbofsouygbxrsejcvemzdikgzyrtgyipqfr-gear{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;text-decoration:none !important;position:absolute !important;display:none !important;font-size:20px !important;width:20px !important;height:20px !important;line-height:20px !important;text-align:center !important;background-color:rgba(255,255,255,.8) !important;background-image:url(chrome-extension://mlomiejdfkolichcflejclcbmpeaniij/data/images/gear.svg) !important;background-size:16px 16px !important;background-position:center center !important;background-repeat:no-repeat !important;text-decoration:none !important;}a#lbofsouygbxrsejcvemzdikgzyrtgyipqfr-gear:hover{-webkit-animation-name:poplbofsouygbxrsejcvemzdikgzyrtgyipqfr !important;animation-name:poplbofsouygbxrsejcvemzdikgzyrtgyipqfr !important;-webkit-animation-duration:0.3s !important;animation-duration:0.3s !important;}#lbofsouygbxrsejcvemzdikgzyrtgyipqfr:hover #lbofsouygbxrsejcvemzdikgzyrtgyipqfr-gear{text-decoration:none !important;display:inline-block !important;}@media print{#lbofsouygbxrsejcvemzdikgzyrtgyipqfr{display:none !important;}}</style></head>
+
+<form action="#" onsubmit="event.preventDefault();filter_change();return false;">
+<a href="#" id="toggle_specs" class="first toggle active">Specs</a>
+<div id="toggle_specs_container" class="toggle_container" style="overflow: hidden; display: block;">
+
+<label class="checkOption">
+<input id="att_sd_card" value="1" type="checkbox"> SD Card<br>
+</label>
+
+<div class="lala">Storage: <span class="att" id="att_storage-min">4</span> GB
+ <div id="slider_att_storage" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div></div></div>
+</div>
+<div class="lala">Ram: <span class="att" id="att_ram-min">0</span> GB
+ <div id="slider_att_ram" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div></div></div>
+</div>
+<div class="lala">Pixels:
+ <span style="display: none" class="att" id="att_pixels-min">130560</span>
+ <span id="pixels_info">480 x 272</span>
+ <div id="slider_att_pixels" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div></div></div>
+</div>
+<div class="lala">Screen:
+ <span class="att" id="att_screen_size-min">3</span>
+ -
+ <span class="att" id="att_screen_size-max">12.5</span>
+ inch
+ <div id="slider_att_screen_size" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div><div class="noUi-origin" style="left: 95.65%;"><div class="noUi-handle noUi-handle-upper"></div></div></div></div>
+</div>
+<div class="lala">Weight: <span class="att" id="att_weight-max">168</span> ounces
+ <div id="slider_att_weight" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin noUi-stacking" style="left: 100%;"><div class="noUi-handle noUi-handle-lower"></div></div></div></div>
+</div>
+<div class="lala">Front Camera: <span class="att" id="att_camera_front_mp-min">0</span> MP
+ <div id="slider_att_camera_front_mp" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div></div></div>
+</div>
+<div class="lala">Rear Camera: <span class="att" id="att_camera_rear_mp-min">0</span> MP
+ <div id="slider_att_camera_rear_mp" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div></div></div>
+</div>
+<div class="lala">Price:
+ $<span class="att" id="price-min">35</span>
+ -
+ $<span class="att" id="price-max">1625.73</span>
+ <div id="slider_price" style="margin: 15px;" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div><div class="noUi-origin" style="left: 100%;"><div class="noUi-handle noUi-handle-upper"></div></div></div></div>
+</div>
+
+
+</div> <!-- toggle_container -->
+
+<a id="toggle_os" href="#" class="toggle">OS</a>
+<div id="toggle_os_container" class="toggle_container">
+
+<label><input type="checkbox" value="Android">Android</label>
+
+<label><input type="checkbox" value="BlackBerry">BlackBerry</label>
+
+<label><input type="checkbox" value="Fire OS">Fire OS</label>
+
+<label><input type="checkbox" value="Kindle OS">Kindle OS</label>
+
+<label><input type="checkbox" value="Windows">Windows</label>
+
+<label><input type="checkbox" value="iOS">iOS</label>
+
+</div>
+
+<!--<a id="toggle_brand" href="#" class="toggle">Brand</a>
+<div id="toggle_brand_container" class="toggle_container">
+
+<label><input type="checkbox" value="Acer">Acer</label>
+
+<label><input type="checkbox" value="Alldaymall">Alldaymall</label>
+
+<label><input type="checkbox" value="Amazon">Amazon</label>
+
+<label><input type="checkbox" value="Apex">Apex</label>
+
+<label><input type="checkbox" value="Apple">Apple</label>
+
+<label><input type="checkbox" value="Astro Queo">Astro Queo</label>
+
+<label><input type="checkbox" value="Astro Tab">Astro Tab</label>
+
+<label><input type="checkbox" value="Asus">Asus</label>
+
+<label><input type="checkbox" value="Barnes &amp; Noble">Barnes &amp; Noble</label>
+
+<label><input type="checkbox" value="BlackBerry ">BlackBerry </label>
+
+<label><input type="checkbox" value="Blue">Blue</label>
+
+<label><input type="checkbox" value="Chromo">Chromo</label>
+
+<label><input type="checkbox" value="Coby">Coby</label>
+
+<label><input type="checkbox" value="Contixo">Contixo</label>
+
+<label><input type="checkbox" value="Crelander">Crelander</label>
+
+<label><input type="checkbox" value="DanCoTek">DanCoTek</label>
+
+<label><input type="checkbox" value="Dell">Dell</label>
+
+<label><input type="checkbox" value="DigiLand">DigiLand</label>
+
+<label><input type="checkbox" value="Dragon Touch">Dragon Touch</label>
+
+<label><input type="checkbox" value="Ematic">Ematic</label>
+
+<label><input type="checkbox" value="HOTT">HOTT</label>
+
+<label><input type="checkbox" value="HP">HP</label>
+
+<label><input type="checkbox" value="HTC">HTC</label>
+
+<label><input type="checkbox" value="Hipstreet">Hipstreet</label>
+
+<label><input type="checkbox" value="Kingpad">Kingpad</label>
+
+<label><input type="checkbox" value="Kobo">Kobo</label>
+
+<label><input type="checkbox" value="Kocaso">Kocaso</label>
+
+<label><input type="checkbox" value="Kurio">Kurio</label>
+
+<label><input type="checkbox" value="LG">LG</label>
+
+<label><input type="checkbox" value="LeapFrog">LeapFrog</label>
+
+<label><input type="checkbox" value="Lenovo">Lenovo</label>
+
+<label><input type="checkbox" value="Microsoft">Microsoft</label>
+
+<label><input type="checkbox" value="Monster">Monster</label>
+
+<label><input type="checkbox" value="Motorola">Motorola</label>
+
+<label><input type="checkbox" value="Nabi">Nabi</label>
+
+<label><input type="checkbox" value="NeuTab">NeuTab</label>
+
+<label><input type="checkbox" value="Nextbook">Nextbook</label>
+
+<label><input type="checkbox" value="Nokia">Nokia</label>
+
+<label><input type="checkbox" value="Nook">Nook</label>
+
+<label><input type="checkbox" value="Other">Other</label>
+
+<label><input type="checkbox" value="POOFEK">POOFEK</label>
+
+<label><input type="checkbox" value="Panasonic">Panasonic</label>
+
+<label><input type="checkbox" value="PolaTab">PolaTab</label>
+
+<label><input type="checkbox" value="Polaroid">Polaroid</label>
+
+<label><input type="checkbox" value="ProntoTec ">ProntoTec </label>
+
+<label><input type="checkbox" value="Pugo Top">Pugo Top</label>
+
+<label><input type="checkbox" value="Pumpkin X">Pumpkin X</label>
+
+<label><input type="checkbox" value="Pyle">Pyle</label>
+
+<label><input type="checkbox" value="RCA">RCA</label>
+
+<label><input type="checkbox" value="Runningstar">Runningstar</label>
+
+<label><input type="checkbox" value="SONY">SONY</label>
+
+<label><input type="checkbox" value="Samsung">Samsung</label>
+
+<label><input type="checkbox" value="Smartab">Smartab</label>
+
+<label><input type="checkbox" value="Tagital">Tagital</label>
+
+<label><input type="checkbox" value="Toshiba">Toshiba</label>
+
+<label><input type="checkbox" value="Trimeo">Trimeo</label>
+
+<label><input type="checkbox" value="Turcom">Turcom</label>
+
+<label><input type="checkbox" value="ValuePad">ValuePad</label>
+
+<label><input type="checkbox" value="Visual Land">Visual Land</label>
+
+<label><input type="checkbox" value="WinBook">WinBook</label>
+
+<label><input type="checkbox" value="Yuntab">Yuntab</label>
+
+<label><input type="checkbox" value="iRulu">iRulu</label>
+
+</div>-->
+
+<a id="toggle_search" href="#" class="toggle">ALL ETFS</a>
+<div id="toggle_search_container" class="toggle_container">
+<div class="lala">Search for ETF:</div>
+<input class="number" id="search" style="width: 100%; text-align: left">
+<div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+<button>GO</button>
+</div>
+</div>
+
+<a id="toggle_category" href="#" class="toggle">More</a>
+<div id="toggle_category_container" class="toggle_container">
+ <div style="font-size: 75%; margin-left: 170px">
+  Choose an ETF:<br>
+  <select id="category" onchange="change_category()">
+   <option value="flashdrives">flash drives</option><option value="laptops">laptops</option><option value="smartphones">smartphones</option><option value="ssd_drives">ssd drives</option><option value="tablets">tablets</option><option value="3d_printers">3d printers</option>
+  </select>
+ </div>
+</div>
+
+</form>
+
+<div class="link"><a href="./">reset settings</a></div>
+
+<style>
+.item_data
+{
+ margin: 60px;
+}
+</style>
+
+<script src="http://geo.productchart.com/tablets/geo_js"></script>
+<script src="/elements/objects/pixelSlider.js"></script>
+
+<script>
+
+for (var i=0;i<data.length;i++)
+{
+ var px=data[i]["att_pixels_x"];
+ var py=data[i]["att_pixels_y"];
+ var ss=data[i]["att_screen_size"];
+ data[i]["att_pixels"]=px*py;
+ data[i]["att_ppi"]=Math.round(Math.sqrt(px*px+py*py)/ss);
+}
+
+analyzeDataLimits();
+
+addSlider("att_ram"        ,"min");
+addSlider("att_storage"    ,"min","values");
+addSlider("att_pixels"     ,"min","values");
+addSlider("att_screen_size","range","values");
+addSlider("att_weight"     ,"max","values");
+addSlider("att_camera_front_mp","min");
+addSlider("att_camera_rear_mp" ,"min");
+addSlider("price"          ,"range","values");
+
+pixelSlider.init();
+
+$("#slider_att_screen_size").val([null, 15]);
+
+$('.settings input:checkbox').change(filter_change);
+
+function applyFilters()
+{
+ mc_filters=[];
+ mc_filters['brand']=getMultipleChoiceFilter('brand');
+ mc_filters['os'   ]=getMultipleChoiceFilter('os'   );
+
+ var search=document.getElementById("search").value;
+ search=search.toLowerCase();
+
+ var filters=getFiltersFromForm();
+
+ if ($("#att_sd_card" ).attr('checked')) filters.min.push({attribute: "att_sd_card"    ,value: 1});
+
+ for (var i=0;i<chart.data.length;i++)
+ {
+  var hidden=false;
+  if (data[i]['name'].toLowerCase().indexOf(search)<0) hidden=true;
+  if (testFilters(i,filters))                          hidden=true;
+  if (testMultipleChoiceFilters(i,mc_filters))         hidden=true;
+  setItemHidden(i,hidden);
+ }
+}
+ 
+axis_names={
+ "price":        "PRICE",
+ "att_storage"     : "STORAGE",
+ "att_storage_per_price": "STORAGE PER DOLLAR",
+ "att_screen_size": "SCREEN SIZE",
+ "att_screen_size_per_price": "INCHES PER DOLLAR",
+ "att_weight": "WEIGHT",
+ "att_ppi": "PPI"
+};
+
+</script>
+
+<script>
+tooltip_template ='<table clas=tooltip><tr><td>';
+tooltip_template+='<a href="'+url_template+'" target=_blank><img src="{IMAGE}"></a></td><td class=data>';
+tooltip_template+='<table>';
+tooltip_template+='<tr><td colspan=2><div class=name><a href="'+url_template+'" target=_blank>{ATT_BASE_NAME}</a></div></td>';
+tooltip_template+='<tr><td>Price</td><td>${PRICE}</td>';
+tooltip_template+='<tr><td colspan=2 class=last_update>as of {LAST_UPDATE} - <a href="../info/prices" target=_blank>Details</a></td>';
+tooltip_template+='<tr><td>Screen</td><td>{ATT_SCREEN_SIZE} inches</td>';
+tooltip_template+='<tr><td>Pixels</td><td>{ATT_PIXELS_X} x {ATT_PIXELS_Y}</td>';
+tooltip_template+='<tr><td>Resolution</td><td>{ATT_PPI} PPI</td>';
+tooltip_template+='<tr><td>Storage</td><td>{ATT_STORAGE} GB</td>';
+tooltip_template+='<tr><td>Ram</td><td>{ATT_RAM} GB</td>';
+tooltip_template+='<tr><td>Weight</td><td>{ATT_WEIGHT} ounces</td>';
+tooltip_template+='</table>';
+tooltip_template+='</td></tr><tr><td class=details colspan=2>';
+tooltip_template+='<a href="{ID}" target=_blank>&gt;&gt; check details and availability</a>';
+tooltip_template+='{COMPARE_INFO}';
+tooltip_template+='</td></tr>';
+tooltip_template+='<tr><td class=controls colspan=2>';
+tooltip_template+='<div class="{HCLASS}" onclick="highlight({I})">highlight</div>';
+tooltip_template+='<div class="{DCLASS}" onclick="dismiss({I})">dismiss</div>';
+tooltip_template+='</td></tr></table>';
+
+chart_item_template='<a class=item target=_blank href="'+url_template+'"></a>';
+
+</script>
+
+<div id="axis_tooltip_template" style="display: none">
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','price')">Price</a>
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','att_storage')">Storage</a>
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','att_storage_per_price')">Storage / Price</a>
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','att_screen_size')">Screen Size</a>
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','att_screen_size_per_price')">Screen Size / Price</a>
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','att_weight')">Weight</a>
+ <a href="#" onclick="event.preventDefault();changeAxis('{AXIS}','att_ppi')">PPI</a>
+</div>
+

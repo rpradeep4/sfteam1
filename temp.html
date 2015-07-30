@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQM Complex Demo</title>
+  <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>    
+</head>
+
+<style>
+
+.ui-page { -webkit-backface-visibility: hidden; }
+</style>
+
+<body>
+    <div data-role="page" id="index">
+        <div data-role="header">
+            <h1>Isuru's R&#233;sum&#233;</h1>
+        </div>
+
+        <div data-role="content">
+            <p>I'm a Mobile Developer with experience in web and android mobile app development. 
+                My skills include HTML, CSS, Python, WAMP Development and Java. 
+                I also have experience with SEO and Internet Advertising.</p>
+            <a href="#contact" data-role="button" data-rel="dialog">Contact me!</a>
+        </div>
+    </div>   
+  
+  <div data-role="dialog" id="contact" data-theme="c">
+    <div data-role="header"><h1>Clicked!</h1></div>
+    <div data-role="content">
+      <p>Clicked content!</p>
+      <a href="#contact" data-rel="back" data-role="button">Go back</a>
+    </div>
+  </div>   
+  
+</body>
+</html>    
+
+<scrip>
+
+  $('#index').live('pagebeforeshow',function(e,data){    
+    $('#test-button').live('click', function(e) {
+        alert('Button click');
+    });    
+});
+  </script>
