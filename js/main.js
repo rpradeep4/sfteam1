@@ -134,7 +134,7 @@
 			
 
 			
-			a.href = "file:///Users/roshnipradeep/Desktop/ProductComparison/table_try.html";
+			a.href = "table_try.html";
 			//document.body.appendChild(a);
 			compareItemWrapper.appendChild(compareItemEffectEl);
 			compareItemWrapper.appendChild(a);
