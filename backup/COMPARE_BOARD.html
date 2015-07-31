@@ -14,7 +14,6 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate.css" />
 		<link rel="stylesheet" href="http://cdn.productchart.com/elements/objects/styles.css">
 		<!--side bar -->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -94,20 +93,25 @@
 			<!-- Blueprint header -->
 			<header class="bp-header cf">
 
-				<span class = "animted bounce"><strong> Add to Cart to finalize or click on + to add to comparison cart </strong></span>
-				<h1 class = "animated rubberBand"><strong>ETF Comparison Cart</strong></h1>
+				<span> Add to Cart to finalize or click on + to add to comparison cart </span>
+				<h1>ETF Comparison Cart</h1>
 				<nav>
-					
+					<a href="http://tympanus.net/Blueprints/GridGallery/" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Show List of ETF's</span></a>
+					<a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-
+					<a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Done</span></a>
 
 						<a href="DROP_COMPARE.html">USE TOOLS</a>
 						<a href="COMPARE_BOARD.html">COMPARISON BUCKETS</a>
 	<div id="o-wrapper" class="o-wrapper">
 						  <div class="c-buttons">
-        
-        <button id="c-button--push-left" class="c-button animated bounce">FILTERS</button>
-      
-        <button id="c-button--push-top" class="c-button animated bounce">Updates</button>
-       
+        <button id="c-button--slide-left" class="c-button">Slide Left</button>
+        <button id="c-button--slide-right" class="c-button">Slide Right</button>
+        <button id="c-button--push-left" class="c-button">FILTERS</button>
+        <button id="c-button--push-right" class="c-button">Push Right</button>
+        <button id="c-button--slide-top" class="c-button">Slide Top</button>
+        <button id="c-button--slide-bottom" class="c-button">Slide Botton</button>
+        <button id="c-button--push-top" class="c-button">Push Top</button>
+        <button id="c-button--push-bottom" class="c-button">Push Bottom</button>
       </div>
 	</div>		
 					
@@ -126,16 +130,7 @@
   </ul>
 </nav><!-- /c-menu slide-left -->
 
-<nav id="c-menu--push-top" class="c-menu c-menu--push-top">
-  <button class="c-menu__close"><strong>x</strong></button>
-  <ul class="c-menu__items">
-    <li class="c-menu__item"><a href="#" class="c-menu__link">most updated information here</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">About</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">Services</a></li>
-  </ul>
-</nav>
-
-<nav id="c-menu--push-left" class="c-menu c-menu--push-left ">
+<nav id="c-menu--push-left" class="c-menu c-menu--push-left">
   <button class="c-menu__close">&larr; Close Menu</button>
   <ul class="c-menu__items">
     <li class="c-menu__item"><a href="#" class="c-menu__link">Home</a></li>
@@ -144,9 +139,6 @@
     <li class="c-menu__item"><a href="#" class="c-menu__link"><INPUT type="checkbox">EMERGING MARKET</a></li>
     <li class="c-menu__item"><a href="#" class="c-menu__link"><INPUT id = "rec" type="checkbox">RECENT SEARCHES</a></li>
  	<li class="c-menu__item"><a href="#" class="c-menu__link"><INPUT id = "rec" type="checkbox">Filter by price interval: <b> 10</b> <input id="ex3" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b> 1000</b></a></li>
- 	<li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>HAVE A QUESTION?</STRONG></a></li>
- 	<li class="c-menu__item"><a href="file:///Users/roshnipradeep/Desktop/ProductComparison/DROP_COMPARE.html#" class="c-menu__link"><strong>ETF VS CDX/TRS/FUTURES</strong></a></li>
- 	<li class="c-menu__item"><a href="file:///Users/roshnipradeep/Desktop/ProductComparison/COMPARE_BOARD.html#" class="c-menu__link"><STRONG>RESET</STRONG></a></li>
 
   </ul>
 </nav>
@@ -156,6 +148,10 @@
 
 <!-- filters -->
 
+ <button id ="filter" type="button" class="btn btn-primary butt" >FILTER</button>
+ <!--
+<button id ="tools" type="button" class="btn btn-primary butt" onclick = "tools()">USE TOOLS</button>
+<button id ="cdx" type="button" class="btn btn-primary butt" onclick = "cdx()" >COMPARE WITH CDX</button>-->
 <div id = "car" style = "display:none" class="wrapper">
            
           
@@ -210,9 +206,6 @@
                 <div id = "car_rec"  class="jcarousel">
                     <ul>
                         <li></li>
-                        <LI></LI>
-                         <LI></LI>
-                          <LI></LI>
                         <li> <img src="images/1.png" style = "width-250px"></li>
                         <li></li>
                          <li> <img src="images/2.png" style = "width-250px"></li>
@@ -386,7 +379,7 @@
 						<span class="product__region extra highlight">Douro</span>
 						<span class="product__varietal extra highlight">Touriga Nacional</span>
 						<span class="product__alcohol extra highlight">13%</span>
-						
+						<span class="product__price highlight">$55.90</span>
 						     
 						     
 						    </div>
@@ -759,7 +752,6 @@
 
 			return 'Current value: ' + value;}
 		});
-
 		</script>
 
 		<script>
@@ -788,7 +780,7 @@
 		<script>
 		$('#ex1Slider').change(function(){
 			//$('div').shuffle();
-			//$('div').shuffle();
+			$('div#myDiv3').shuffle();
 			//$('div#myDiv4').shuffle();
 		//$('div#myDiv2').hide();
 		$('div#myDiv3').hide();
@@ -2459,23 +2451,6 @@ $(function () {
 	
 		<script>
 			
-  /**
-   * Push top instantiation and action.
-   */
-  var pushTop = new Menu({
-    wrapper: '#o-wrapper',
-    type: 'push-top',
-    menuOpenerClass: '.c-button',
-    maskId: '#c-mask'
-  });
-
-  var pushTopBtn = document.querySelector('#c-button--push-top');
-  
-  pushTopBtn.addEventListener('click', function(e) {
-    e.preventDefault;
-    pushTop.open();
-  });
-
 		</script>
 
 		<!--ytm highchart -->
