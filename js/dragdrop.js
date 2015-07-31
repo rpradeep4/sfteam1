@@ -234,6 +234,8 @@
 			// add class is-dropped to draggable ( controls how the draggable appears again at its original position)
 			classie.add( instance.element, 'is-dropped' );
 			// after a timeout remove that class to trigger the transition
+			console.log("dropeed yoo!")
+			$("div#original").show();
 			setTimeout( function() {
 				classie.add( instance.element, 'is-complete' );
 				

@@ -21,6 +21,21 @@
 		<link rel="stylesheet" type="text/css" href="css/demo_dd.css" />
 		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/bottom-area.css" />
+		<link rel="stylesheet" type="text/css" href="css/toggle.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+   
+			 <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/demo_drag.css">
+    <link rel="stylesheet" href="css/jquery.dad.css">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+        <!-- <script src="js/bootstrap.js"></script>-->
+           <script src="js/bootstrap.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 		<script src="js/modernizr.custom_dd.js"></script>
 		<script src="js/draggabilly.pkgd.min.js"></script>
 		<script src="js/dragdrop.js"></script>
@@ -28,37 +43,42 @@
 		<!--carousal -->
 		 <!-- Example assets -->
         <link rel="stylesheet" type="text/css" href="jcarousel.responsive.css">
-         <script src="js/jquery-1.11.3.min.js"></script>
-         <script src="js/bootstrap.js"></script>
-           <script src="js/bootstrap.min.js"></script>
+         
        <!-- <script type="text/javascript" src="../../libs/jquery/jquery.js"></script>
         <script type="text/javascript" src="../../dist/jquery.jcarousel.min.js"></script>-->
-
+<!--
         <script type="text/javascript" src="jcarousel.responsive.js"></script>
         <script src="http://d3js.org/d3.v3.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-		<script type='text/javascript' src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"> </script>
+		
+		<script type='text/javascript' src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"> </script>-->
 
 		
 		<!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.3.min.css" />-->
 		<!-- dad -->
-		 <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/demo_drag.css">
-    <link rel="stylesheet" href="css/jquery.dad.css">
+	
 	<!--	 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>-->
 		<!--<script src="js/jquery.mobile-1.4.3.min.js"></script>-->
       
-<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>-->
+<style >
 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+</style>
      
     
-		<link rel="stylesheet" type="text/css" href="css/toggle.css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css" />
-
-   
+		
     
 		<!-- Modernizr is used for flexbox fallback -->
 		<script src="js/modernizr.custom.js"></script>
@@ -66,16 +86,16 @@
 		<script src="js/bootstrap-slider.js"></script>
 		<script type="text/javascript" src="js/slideout.min.js"></script>
 		<!--setting -->
-		
+		<!--
 		<script src="js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/jquery.smartmenus.min.js"></script>
-		<script type="text/javascript" src="js/jquery.smartmenus.bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.smartmenus.bootstrap.min.js"></script>-->
 		<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
-		<script type="text/javascript" src="js/jflickrfeed.js"></script>
+		<!--<script type="text/javascript" src="js/jflickrfeed.js"></script>
 		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
 		
-		<script type="text/javascript" src="js/jquery-scrolltofixed-min.js"></script>
+		<script type="text/javascript" src="js/jquery-scrolltofixed-min.js"></script>-->
 		<!-- drag -->
 	
 	</head>
@@ -102,14 +122,70 @@
 					</nav>
 				</nav>
 			</header>
+			
+          <div id = "original" class="product flipInY" style="display:none">
+					<div id = "original" class="product__info">
+						<img class="product__image slideIn" src="images/1.png" alt="Product 1" />
+						<button type="button" class="btn btn-primary butt" data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
+						  <table class="table table-striped table-bordered table-hover animated rotateIn">
+    <thead>
+      <tr>
+      	<th>   </th>
+        <th>FUTURES</th>
+        <th>ETF</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>COMMISSION</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>IMPACT AND SPREAD</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="danger">
+        <td>FUTURES ROLL COMMISSIONS</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="warning">
+        <td>RICHNESS/(CHEAPNESS)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="success">
+        <td>ETF MANAGEMENET FEE</td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>BASKET LANDING REVENUE</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="primary">
+        <td>FOREIGN DIVIDEND TAX RECLAIM</td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div><!--table end -->
+						
+					</div>
+					
+				</div>
+		</div>
 <!-- filters -->
 
- <button id ="filter" type="button" class="btn btn-primary butt" >FILTER</button>
-<button id ="tools" type="button" class="btn btn-primary butt" onclick = "tools()">USE TOOLS</button>
-<button id ="cdx" type="button" class="btn btn-primary butt" onclick = "cdx()" >COMPARE WITH CDX</button>
 <div id = "car" style = "display:none" class="wrapper">
            
-          
+        
 
             <div id = "car" class="jcarousel-wrapper">
                 <div id = "car"  class="jcarousel">
@@ -235,23 +311,16 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h3 class="modal-title"><KBD>ETF NAME</KBD></h3> 
+        <h3 class="modal-title"><KBD>ETF NAME VS FUTURES</KBD></h3> 
         <img src="images/pdf.png" alt="graph here" style="width:404px;height:58px;">
       </div>
       <div class="modal-body">
        
-        	<button type="button" style ="display:inline" class="btn btn-info btn-lg butt" id = "butt">WHY THIS ETF</button>
-        	<button type="button" style ="display:inline" class="btn btn-primary btn-lg butt "id = "butt1">CHART & RETURNS</button>
         	
-        	<button type="button" style ="display:inline" id = "butt3" class="btn btn-danger btn-lg butt">DISTRIBUTIONS</button>
-        	<button type="button" style ="display:inline" id = "butt4" class="btn btn-info btn-lg butt">PREMIUM DISCOUNT
-        	</button>
-        	<button type="button" style ="display:inline" id = "butt5" class="btn btn-warning btn-lg butt">HOLDINGS
+        	<button type="button" style ="display:inline" id = "butt5" class="btn btn-warning btn-lg butt">REAL TIME COMPARISON
         	</button>
 
-        	<div class="flip-container-1" id = "img_chart" style="display:none" ontouchstart="this.classList.toggle('hover1');">
-        	<img src="images/g1.png" alt="graph here" style="width:704px;height:458px;">
-        </div>
+        	
         	
         	<div data-role="PAGE" id="page1" style ="display:none">
 
@@ -272,9 +341,13 @@
 
 				<div data-role="PAGE"  id="body" style ="display:none">
 					<div data-role="header">
-			        <h1>SEE TOP ISSUERS</h1>
+			       
 			    </div><!-- /header -->
 			     <div data-role="content">  
+			     		<form>
+  <label><input type="radio" name="mode" value="grouped"> Grouped</label>
+  <label><input type="radio" name="mode" value="stacked" checked> UPDATE</label>
+</form>
 			     	 </div><!-- /content -->
 				</div>
 
@@ -394,6 +467,15 @@
 		<script>
 $(document).ready(function(){
 	 //$("div#drop-area").slideToggle("slow");
+	/* $("div#original").dialog({
+       autoOpen: false,
+        height: "auto",
+        width: "auto",
+        modal: true,
+         my: "center",
+         at: "center",
+         of: window
+})*/
 	  $("div#grid").show();
 	$("div#drag_drop").hide();
 	//$("div#drop-area").hide();
@@ -409,26 +491,7 @@ $(document).ready(function(){
 		//$("#car").show();
     $("#car_rec").slideToggle("slow");
 });
-/*$("#tools").click(function(){
-		//$("#car").show();
-		//console.log("click tool");
-    $("div#grid").slideToggle("slow");
-     $("div#drop-area").slideToggle("slow");
 
-});
-$("#cdx").click(function(){
-		//$("#car").show();
-		//console.log("click tool");
-    $("div#grid").slideToggle("slow");
-     $("div#drop-area1").slideToggle("slow");
-
-});*/
-
-	
-	$("#ex2").slider({});
-
-
-  
 
    });
 
@@ -489,37 +552,13 @@ $("#cdx").click(function(){
 	<!-- drag drop -->
 	
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.dad.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
-<script>
-    $(function(){
-        $('html').niceScroll({cursorcolor:"#639BF6",cursorwidth :10, cursorborder: 'none'});
-        //dad simple demo
-        $('.dad').dad();
-        //dad dropzone
-        var d=$('.dad2').dad();
-        d.addDropzone('.dropzone',function(e){
-            e.remove();
-        });
-        //dad activate and deactivate
-        $('.act').on('click',function(){
-            $('.btndemo').not(this).removeClass('active');
-            $(this).addClass('active');
-            d.css('opacity',1);
-            d.activate();
-        });
-        $('.deact').on('click',function(){
-            $('.btndemo').not(this).removeClass('active');
-            $(this).addClass('active');
-            d.css('opacity',0.5);
-            d.deactivate();
-        });
+<script type="text/javascript">
+     jQuery.curCSS = jQuery.css;
+</script>
 
-
-        $(".dad-draggable").dad({draggable:'.draggable'})
-
-    })
-	</script>
 	<!--side bar -->
 	
 		<script>
@@ -537,7 +576,7 @@ $("#cdx").click(function(){
 							 $(this).addClass( "ui-state-highlight" );  
        // $( "#cornDialog" ).dialog( "open" ); 
 
-    alert("Dropped into tool box!");
+    alert("Dropped into tool box, Here Tool page will open as a pop up!");
 							classie.add( instance.el, 'drop-feedback' );
 							clearTimeout( instance.checkmarkTimeout );
 							instance.checkmarkTimeout = setTimeout( function() { 
@@ -605,8 +644,15 @@ $("#cdx").click(function(){
 							//$(ui.instance).find('.link-to-open').click()
 							// $(this).addClass( "ui-state-highlight" );  
        // $( "#cornDialog" ).dialog( "open" ); 
-
-    alert("This will show CDX VS ETF!");
+       /*	var p = window.createPopup();
+       	var pbody = p.document.body;
+       	pbody.style.backgroundColor = "lime";
+       	pbody.style.border = "black";
+       	pbody.innerHTML = "yo";
+       	p.show(150,150,200,50,document.body);*/
+   
+   $("div#original").dialog({width: 600,height:500});
+  // $("#myModal").modal("show");
 							classie.add( instance.el, 'drop-feedback1' );
 							clearTimeout( instance.checkmarkTimeout );
 							instance.checkmarkTimeout = setTimeout( function() { 
@@ -657,6 +703,192 @@ $("#cdx").click(function(){
 				} );
 			})();
 		</script>
+
+		
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script>
+
+var n = 4, // number of layers
+    m = 58, // number of samples per layer
+    stack = d3.layout.stack(),
+    layers = stack(d3.range(n).map(function() { return bumpLayer(m, .1); })),
+    yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
+    yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
+
+var margin = {top: 40, right: 10, bottom: 20, left: 10},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.ordinal()
+    .domain(d3.range(m))
+    .rangeRoundBands([0, width], .08);
+
+var y = d3.scale.linear()
+    .domain([0, yStackMax])
+    .range([height, 0]);
+
+var color = d3.scale.linear()
+    .domain([0, n - 1])
+    .range(["#aad", "#556"]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .tickSize(0)
+    .tickPadding(6)
+    .orient("bottom");
+
+var svg = d3.select("#body").append("svg")
+    .attr("width", width + margin.left + margin.right-80)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var layer = svg.selectAll(".layer")
+    .data(layers)
+  .enter().append("g")
+    .attr("class", "layer")
+    .style("fill", function(d, i) { return color(i); });
+
+var rect = layer.selectAll("rect")
+    .data(function(d) { return d; })
+  .enter().append("rect")
+    .attr("x", function(d) { return x(d.x); })
+    .attr("y", height)
+    .attr("width", x.rangeBand())
+    .attr("height", 0);
+
+rect.transition()
+    .delay(function(d, i) { return i * 10; })
+    .attr("y", function(d) { return y(d.y0 + d.y); })
+    .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); });
+
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+d3.selectAll("input").on("change", change);
+
+var timeout = setTimeout(function() {
+  d3.select("input[value=\"grouped\"]").property("checked", true).each(change);
+}, 2000);
+
+function change() {
+  clearTimeout(timeout);
+  if (this.value === "grouped") transitionGrouped();
+  else transitionStacked();
+}
+
+function transitionGrouped() {
+  y.domain([0, yGroupMax]);
+
+  rect.transition()
+      .duration(500)
+      .delay(function(d, i) { return i * 10; })
+      .attr("x", function(d, i, j) { return x(d.x) + x.rangeBand() / n * j; })
+      .attr("width", x.rangeBand() / n)
+    .transition()
+      .attr("y", function(d) { return y(d.y); })
+      .attr("height", function(d) { return height - y(d.y); });
+}
+
+function transitionStacked() {
+  y.domain([0, yStackMax]);
+
+  rect.transition()
+      .duration(500)
+      .delay(function(d, i) { return i * 10; })
+      .attr("y", function(d) { return y(d.y0 + d.y); })
+      .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+    .transition()
+      .attr("x", function(d) { return x(d.x); })
+      .attr("width", x.rangeBand());
+}
+
+// Inspired by Lee Byron's test data generator.
+function bumpLayer(n, o) {
+
+  function bump(a) {
+    var x = 1 / (.1 + Math.random()),
+        y = 2 * Math.random() - .5,
+        z = 10 / (.1 + Math.random());
+    for (var i = 0; i < n; i++) {
+      var w = (i / n - y) * z;
+      a[i] += x * Math.exp(-w * w);
+    }
+  }
+
+  var a = [], i;
+  for (i = 0; i < n; ++i) a[i] = o + o * Math.random();
+  for (i = 0; i < 5; ++i) bump(a);
+  return a.map(function(d, i) { return {x: i, y: Math.max(0, d)}; });
+}
+
+/*
+			var data_bar = [
+  {"title":"Revenue","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250]},
+  {"title":"Profit","subtitle":"%","ranges":[20,25,30],"measures":[21,23],"markers":[26]},
+  {"title":"Order Size","subtitle":"US$, average","ranges":[350,500,600],"measures":[100,320],"markers":[550]},
+  {"title":"New Customers","subtitle":"count","ranges":[1400,2000,2500],"measures":[1000,1650],"markers":[2100]},
+  {"title":"Satisfaction","subtitle":"out of 5","ranges":[3.5,4.25,5],"measures":[3.2,4.7],"markers":[4.4]}
+];
+
+var margin = {top: 5, right: 40, bottom: 20, left: 120},
+    width = 960 - margin.left - margin.right,
+    height = 50 - margin.top - margin.bottom;
+
+var chart = d3.bullet()
+    .width(width)
+    .height(height);
+
+d3.json(data_bar, function(error, data) {
+  if (error) throw error;
+
+  var svg = d3.select("#body").selectAll("svg")
+      .data(data)
+    .enter().append("svg")
+      .attr("class", "bullet")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .call(chart);
+
+  var title = svg.append("g")
+      .style("text-anchor", "end")
+      .attr("transform", "translate(-6," + height / 2 + ")");
+
+  title.append("text")
+      .attr("class", "title")
+      .text(function(d) { return d.title; });
+
+  title.append("text")
+      .attr("class", "subtitle")
+      .attr("dy", "1em")
+      .text(function(d) { return d.subtitle; });
+
+  d3.selectAll("button").on("click", function() {
+    svg.datum(randomize).call(chart.duration(1000)); // TODO automatic transition
+  });
+});
+
+function randomize(d) {
+  if (!d.randomizer) d.randomizer = randomizer(d);
+  d.ranges = d.ranges.map(d.randomizer);
+  d.markers = d.markers.map(d.randomizer);
+  d.measures = d.measures.map(d.randomizer);
+  return d;
+}
+
+function randomizer(d) {
+  var k = d3.max(d.ranges) * .2;
+  return function(d) {
+    return Math.max(0, d + k * (Math.random() - .5));
+  };
+}*/
+
+</script>
 
 	</body>
 </html>

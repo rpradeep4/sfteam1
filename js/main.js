@@ -80,7 +80,11 @@
 		preview.appendChild(productImageEl);
 		preview.appendChild(removeCtrl);
 
-		var productInfo = item.querySelector('.product__info').innerHTML;
+		//var productInfo = item.querySelector('.product__info').innerHTML;
+		 var productInfo = document.getElementById("original").innerHTML;
+		//var productInfo = .innerHTML;
+		console.log("is",productInfo);
+		//var productInfo = ""
 		preview.setAttribute('data-info', productInfo);
 
 		return preview;

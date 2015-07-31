@@ -24,13 +24,13 @@
 		<script src="js/modernizr.custom_dd.js"></script>
 		<script src="js/draggabilly.pkgd.min.js"></script>
 		<script src="js/dragdrop.js"></script>
+
 		
 		<!--carousal -->
 		 <!-- Example assets -->
         <link rel="stylesheet" type="text/css" href="jcarousel.responsive.css">
          <script src="js/jquery-1.11.3.min.js"></script>
-         <script src="js/bootstrap.js"></script>
-           <script src="js/bootstrap.min.js"></script>
+                  <script src="js/bootstrap.min.js"></script>
        <!-- <script type="text/javascript" src="../../libs/jquery/jquery.js"></script>
         <script type="text/javascript" src="../../dist/jquery.jcarousel.min.js"></script>-->
 
@@ -274,7 +274,19 @@
 				<div data-role="PAGE"  id="body" style ="display:none">
 					<div data-role="header">
 			        <h1>SEE TOP ISSUERS</h1>
+			        <button type="button" style ="display:inline" id = "butt6" class="btn btn-warning butt">YTM</button>
 			    </div><!-- /header -->
+			   
+			     <div data-role="content">  
+			     	 </div><!-- /content -->
+				</div>
+
+				<div data-role="PAGE"  id="container" style ="display:none">
+					<div data-role="header">
+			        
+			       
+			    </div><!-- /header -->
+			   
 			     <div data-role="content">  
 			     	 </div><!-- /content -->
 				</div>
@@ -308,12 +320,20 @@
 
 				<div id = "myDiv" class="product" >
 					<div id = "myDiv" class="product__info" >
+						
+
+
 						<div id = "myDiv" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
 						  <div id = "myDiv" class="flipper">
 						    <div id = "myDiv" class="front">
 						      <!-- front content -->
 						      <h3 class="product__title"><STRONG></STRONG></h3>
 						      <img class="product__image" src="images/1.png" alt="Product 1" />
+						      <span class="product__year extra highlight">2011</span>
+						<span class="product__region extra highlight">Douro</span>
+						<span class="product__varietal extra highlight">Touriga Nacional</span>
+						<span class="product__alcohol extra highlight">13%</span>
+						<span class="product__price highlight">$55.90</span>
 						     
 						     
 						    </div>
@@ -330,6 +350,10 @@
 												
 												<button type="button" class="btn btn-primary butt" data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
 
+
+												<a class="butt" href="https://business.pinterest.com/en/set-your-business-account" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="32"><img src="images/pin.png" width = "54" height="54"/></a>
+												<a class = "butt" href="https://business.pinterest.com/en/set-your-business-account" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="32"><img src="images/g+.png" width = "54" height="54"/></a>
+
 												<!--<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>-->
 												
 											
@@ -340,10 +364,22 @@
 											
 						</div>
 					</div>
-				</div>
+				<!----></div><!-- prod info-->
 			</div>
 				
-
+<!--original-->
+<div id = "original" class="product" style="display:none">
+					<div id = "original" class="product__info">
+						<img class="product__image" src="images/44.png" alt="Product 1" />
+						<h3 class="product__title">ETF NAME</h3>
+						<span class="product__year extra highlight product__price highlight">2011</span>
+						<span class="product__region extra highlight product__price highlight">Douro</span>
+						<span class="product__varietal extra highlight product__price highlight">Touriga Nacional</span>
+						<span class="product__alcohol extra highlight product__price highlight">13%</span>
+						
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
 				<!--2nd-->
 
 				<div id = "myDiv2" class="product">
@@ -686,6 +722,11 @@
 
 		$("#butt5").click(function(){
 			$("#body").slideToggle('slow');
+
+		});
+		$("#butt6").click(function(){
+			console.log("butt6");
+			$("#container").slideToggle('slow');
 
 		});
 		</script>
@@ -2299,172 +2340,61 @@ svg.on("mousemove", function() {
 	<script src="js/jquery.min.js"></script>
 <script src="js/jquery.dad.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
-<script>
-    $(function(){
-        $('html').niceScroll({cursorcolor:"#639BF6",cursorwidth :10, cursorborder: 'none'});
-        //dad simple demo
-        $('.dad').dad();
-        //dad dropzone
-        var d=$('.dad2').dad();
-        d.addDropzone('.dropzone',function(e){
-            e.remove();
-        });
-        //dad activate and deactivate
-        $('.act').on('click',function(){
-            $('.btndemo').not(this).removeClass('active');
-            $(this).addClass('active');
-            d.css('opacity',1);
-            d.activate();
-        });
-        $('.deact').on('click',function(){
-            $('.btndemo').not(this).removeClass('active');
-            $(this).addClass('active');
-            d.css('opacity',0.5);
-            d.deactivate();
-        });
-
-
-        $(".dad-draggable").dad({draggable:'.draggable'})
-
-    })
-	</script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+<script type="text/javascript">
+     
+		
+$(function () {
+	
+    $('div#container').highcharts({
+    	console.log("in high");
+        chart: {
+            type: 'column',
+            margin: 75,
+            options3d: {
+        enabled: true,
+                alpha: 15,
+                beta: 15,
+                depth: 350
+            }
+        },
+        plotOptions: {
+            column: {
+                depth: 40,
+                stacking: true,
+                grouping: false,
+                groupZPadding: 10
+            }
+        },
+        series: [{
+            data: [1, 2, 4, 3, 2, 4],
+            stack: 0
+        }, {
+            data: [5, 6, 3, 4, 1, 2],
+            stack: 2
+        }, {
+            data: [7, 9, 8, 7, 5, 8],
+            stack: 1
+        }]
+    });
+});
+</script>
+       
+	
 	<!--side bar -->
 	
 		<script>
-			(function tools() {
-				var body = document.body,
-					dropArea = document.getElementById( 'drop-area' ),
-					droppableArr = [], dropAreaTimeout;
-
-				// initialize droppables
-				[].slice.call( document.querySelectorAll( '#drop-area .drop-area__item' )).forEach( function( el ) {
-					droppableArr.push( new Droppable( el, {
-						onDrop : function( instance, draggableEl ) {
-							// show checkmark inside the droppabe element
-							//$(ui.instance).find('.link-to-open').click()
-							 $(this).addClass( "ui-state-highlight" );  
-       // $( "#cornDialog" ).dialog( "open" ); 
-
-    alert("Dropped into tool box!");
-							classie.add( instance.el, 'drop-feedback' );
-							clearTimeout( instance.checkmarkTimeout );
-							instance.checkmarkTimeout = setTimeout( function() { 
-								classie.remove( instance.el, 'drop-feedback' );
-							}, 800 );
-							// ...
-						}
-					} ) );
-				} );
-
 			
-
-				// initialize draggable(s)
-				[].slice.call(document.querySelectorAll( '#grid .grid__item' )).forEach( function( el ) {
-					new Draggable( el, droppableArr, {
-						scroll : true,
-						scrollable : '#drop-area',
-						scrollSpeed : 40,
-						scrollSensitivity : 50,
-						draggabilly : { containment: document.body },
-						onStart : function() {
-							// add class 'drag-active' to body
-							classie.add( body, 'drag-active' );
-							// clear timeout: dropAreaTimeout (toggle drop area)
-							clearTimeout( dropAreaTimeout );
-							// show dropArea
-							classie.add( dropArea, 'show' );
-						},
-						onEnd : function( wasDropped ) {
-							var afterDropFn = function() {
-								// hide dropArea
-								classie.remove( dropArea, 'show' );
-								// remove class 'drag-active' from body
-								classie.remove( body, 'drag-active' );
-							};
-
-							if( !wasDropped ) {
-								afterDropFn();
-							}
-							else {
-								// after some time hide drop area and remove class 'drag-active' from body
-								clearTimeout( dropAreaTimeout );
-								dropAreaTimeout = setTimeout( afterDropFn, 400 );
-								
-							}
-						}
-					} );
-				} );
-			})();
 		</script>
 
 		<!--bottom-->
 		<script>
-			//(function() {
-				(function cdx(){
-				var body = document.body,
-					dropArea = document.getElementById( 'drop-area1' ),
-					droppableArr = [], dropAreaTimeout;
-
-				// initialize droppables
-				[].slice.call( document.querySelectorAll( '#drop-area1 .drop-area1__item' )).forEach( function( el ) {
-					droppableArr.push( new Droppable( el, {
-						onDrop : function( instance, draggableEl ) {
-							// show checkmark inside the droppabe element
-							//$(ui.instance).find('.link-to-open').click()
-							// $(this).addClass( "ui-state-highlight" );  
-       // $( "#cornDialog" ).dialog( "open" ); 
-
-    alert("This will show CDX VS ETF!");
-							classie.add( instance.el, 'drop-feedback1' );
-							clearTimeout( instance.checkmarkTimeout );
-							instance.checkmarkTimeout = setTimeout( function() { 
-								classie.remove( instance.el, 'drop-feedback1' );
-							}, 800 );
-							// ...
-						}
-					} ) );
-				} );
-
 			
-
-				// initialize draggable(s)
-				[].slice.call(document.querySelectorAll( '#grid .grid__item' )).forEach( function( el ) {
-					new Draggable( el, droppableArr, {
-						scroll : true,
-						scrollable : '#drop-area1',
-						scrollSpeed : 40,
-						scrollSensitivity : 50,
-						draggabilly : { containment: document.body },
-						onStart : function() {
-							// add class 'drag-active' to body
-							classie.add( body, 'drag-active' );
-							// clear timeout: dropAreaTimeout (toggle drop area)
-							clearTimeout( dropAreaTimeout );
-							// show dropArea
-							classie.add( dropArea, 'show' );
-						},
-						onEnd : function( wasDropped ) {
-							var afterDropFn = function() {
-								// hide dropArea
-								classie.remove( dropArea, 'show' );
-								// remove class 'drag-active' from body
-								classie.remove( body, 'drag-active' );
-							};
-
-							if( !wasDropped ) {
-								afterDropFn();
-							}
-							else {
-								// after some time hide drop area and remove class 'drag-active' from body
-								clearTimeout( dropAreaTimeout );
-								dropAreaTimeout = setTimeout( afterDropFn, 400 );
-								
-							}
-						}
-					} );
-				} );
-			})();
 		</script>
+
+		<!--ytm highchart -->
+		   
 
 	</body>
 </html>
