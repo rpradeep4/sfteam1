@@ -121,19 +121,20 @@ path.link {
 <body>
 <div class="container">
    
-    <h1 class = "animated fadeInLeft"><KBD>DETAILED COMPARISON</KBD> </h1>
+    <h1 class = "animated fadeInLeft well">DETAILED COMPARISON</h1>
+     <button type="button" class="btn btn-success butt animated fadeInLeft" data-toggle="modal" data-target="#myModal">GRAPHICAL ANALYSIS</button>
    
 
-    <div class ="col-md-8" style:"display:inline">
-    <div id="toolbar">
+    <div class ="col-md-8" style:"display:inline" STYLE = "display:none">
+    <div id="toolbar" STYLE = "display:none" >
         <button id="remove" style ="display:inline" class="btn btn-primary butt animated fadeInLeft" >
             <i class="glyphicon glyphicon-remove"></i> Delete Row
         </button>
-        <button type="button" class="btn btn-success butt animated fadeInLeft" data-toggle="modal" data-target="#myModal">GRAPHICAL ANALYSIS</button>
+       
          
     </div>
     
-    <table  class = "animated flipInY" id="table"
+    <table  STYLE = "display:none" class = "animated slideInLeft" id="table"
            data-toolbar="#toolbar"
            data-search="true"
            data-show-refresh="true"
@@ -154,14 +155,208 @@ path.link {
 </div>
 <!--tree -->
  <button id="CHOOSE" class="btn btn-primary butt animated fadeInRight" >
-             CHOOSE ETF </button>
+             CHOOSE FROM SIMILAR ETF </button>
             
-<div class ="col-md-4 animated rotateIn " style="display:none" id="chart">
+<div class ="col-md-3 animated slideInLeft" style="display:none" id="chart">
 </div>
 
 <!--end tree -->
 
+
+
+<!--summary -->
+<div class = "col-md-8" >
+<H3 id = "1"> SUMMARY </H3>
+          <table id ="summary" class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td>NAV</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>LATEST PRICE</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="primary">
+        <td>CURRENCY</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>FUND SIZE</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="primary">
+        <td>INCEPTION DATE</td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr class = "primary">
+        <td>CLOSED FOR NEW CREATIONS</td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+<!--table end -->
+
+<!--benchark -->
+<H3 id = "2"> BENCHMARK/OBJECTIVE </H3>
+          <table id = "bench" class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td>OBJECTIVE</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>ASSET CLASS</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="primary">
+        <td>LEVERAGE/SHORT</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>BENCHMARK TICKER</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="primary">
+        <td>BENCHMARK NAME</td>
+        <td></td>
+        <td></td>
+        </tr>
+       
+      
+    </tbody>
+  </table>
+<!--table end -->
+
+<!--REPLICATION -->
+<div class = "container">
+<H3 id = "3"> REPLICATION </H3>
+          <table id = "replication" class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td># OF HOLDINGS(ETF)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td># OF HOLDINGS(BENCHMARK INDEX)</td>
+        <td></td>
+        <td></td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+
+
+<h3 id = "4"> CREATION UNIT </h3>
+
+          <table ID ="creation "class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td>CREATION/REDEMPTION FEE</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>CREATION/REDEMPTION</td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+<!--table end -->
+
+<!--LIQ -->
+<H3 id = "5"> COSTS & LIQUIDITY</H3>
+          <table class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="PRIMARY">
+        <td>EXPENSE RATIO %</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>CURRENT BID-ASK SPREAD</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="PRIMARY">
+        <td>30 DAYS AVG DAILY VOLUME</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="INFO">
+        <td>30 DAYS AVG DAILY VOLUME(SHARES)</td>
+        <td></td>
+        <td></td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+<!--table end -->
+
+ <!--CONT -->
+
 </div>
+</div>
+
+
 
 
 
@@ -438,7 +633,7 @@ path.link {
 <!--tree -->
 <script>
 var data = {
-    "name": "flare",
+    "name": "SIMILAR ETFS",
     "children": [
         {
         "name": "analytics",
@@ -1227,7 +1422,7 @@ var data = {
     ]
 };
 
-var w = 960,
+var w = 260,
     h = 800,
     i = 0,
     barHeight = 20,
@@ -1458,6 +1653,26 @@ $("#butt5").click(function(){
 
         });
 </SCRIPT>
+<script>
+$("#1").click(function(){
+            $("#summary").slideToggle('slow');
+
+        });
+$("#2").click(function(){
+            $("#bench").slideToggle('slow');
+
+        });
+$("#3").click(function(){
+            $("#replication").slideToggle('slow');
+
+        });
+$("#4").click(function(){
+            $("#creation").slideToggle('slow');
+
+        });
+
+
+</script>
 
 </body>
 </html>

@@ -448,12 +448,12 @@
 }
 
 .compare__item .product__price {
-	color: #CECECE;
+	color: #000;
 }
 
 .compare__item span[class^="product__"] {
 	display: block;
-	padding: 0.85em 0;
+	padding: 0.65em 0;
 	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
@@ -611,6 +611,7 @@
 		padding: 0.25em;
 		margin: 0 0 0.5em 0;
 		font-size: 0.85em;
+
 	}
 
 	.compare__item:nth-child(odd) {
