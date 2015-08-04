@@ -66,14 +66,14 @@ path.link {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h3 class="modal-title"><KBD> GRAPHICAL ANALYSIS</KBD></h3> 
-        <img src="images/pdf.png" alt="graph here" style="width:404px;height:58px;">
+        <h3 class="modal-title well"> GRAPHICAL ANALYSIS</h3> 
+       <img ID ="tab" src="images/pdf.png" alt="graph here" style="width:404px;height:58px;">
       </div>
       <div class="modal-body">
        
-            <button type="button" style ="display:inline" class="btn btn-info btn-lg butt" id = "butt">GRAPH1</button>
+            <button type="button" style ="display:inline" class="btn btn-info btn-lg butt" id = "butt">SECTOR ALLOCATION</button>
             
-            <button type="button" style ="display:inline" id = "butt5" class="btn btn-warning btn-lg butt">GRAPH2
+            <button type="button" style ="display:inline" id = "butt5" class="btn btn-warning btn-lg butt">PORTFOLIO RETURN
             </button>
 
             
@@ -95,10 +95,10 @@ path.link {
                         
                 </div>
 
-                <div data-role="dialog"  id="body" style ="display:none">
+                <div data-role="dialog"  id="body1" style ="display:none">
                     <div data-role="header">
                         <DIV CLASS ="CONTAINER">
-                        <button class="btn btn-info  butt" onclick="transition()">Update</button>
+                       <!-- <button class="btn btn-info  butt" onclick="transition()">Update</button>-->
                     <h1></h1>
                 </div><!-- /header -->
                  <div data-role="content">  
@@ -119,10 +119,15 @@ path.link {
 </div><!--modal-->
 
 <body>
+     <a href = "COMPARE_BOARD.html" ><img src = "images/tab.png" ></a>
 <div class="container">
+
    
     <h1 class = "animated fadeInLeft well">DETAILED COMPARISON</h1>
-     <button type="button" class="btn btn-success butt animated fadeInLeft" data-toggle="modal" data-target="#myModal">GRAPHICAL ANALYSIS</button>
+     <button id= "detailed_b" type="button" class="btn btn-success  animated fadeInLeft" >DETAILED ANALYSIS</button>
+    <!--
+     <button type="button" class="btn btn-success butt animated fadeInLeft" data-toggle="modal" data-target="#myModal">GRAPHICAL ANALYSIS</button>-->
+     <button id = "graphical" type="button" class="btn btn-success  animated fadeInLeft" >GRAPHICAL ANALYSIS</button>
    
 
     <div class ="col-md-8" style:"display:inline" STYLE = "display:none">
@@ -154,25 +159,39 @@ path.link {
     </table>
 </div>
 <!--tree -->
- <button id="CHOOSE" class="btn btn-primary butt animated fadeInRight" >
-             CHOOSE FROM SIMILAR ETF </button>
+ <button id="CHOOSE" class="btn btn-success  animated fadeInRight" >
+             ADD A SIMILAR ETF </button>
             
 <div class ="col-md-3 animated slideInLeft" style="display:none" id="chart">
 </div>
 
 <!--end tree -->
 
-
+<!--graph -->
+<div   id="body" style ="display:none">
+    <br>
+    <button type="button" style ="display:inline" class="btn btn-info " id = "butt">SECTOR ALLOCATION</button>
+            
+            <button type="button" style ="display:inline" id = "butt5" class="btn btn-warning ">PORTFOLIO RETURN
+            </button>
+                   
+                       
+                        <button class="btn btn-info " onclick="transition()">Update</button>
+                   
+               
+                
+ </div>
 
 <!--summary -->
-<div class = "col-md-8" >
-<H3 id = "1"> SUMMARY </H3>
-          <table id ="summary" class="table table-striped table-bordered table-hover animated slideInLeft">
+<div id= "detailed" class = "col-md-8" >
+<H3 style="display:inline"> SUMMARY </H3><img id = "1" src = "images/plus.png" width="12px" height="15px">
+          <table id ="summary" style="display:none" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
         <th>   </th>
         <th>ETF1</th>
         <th>ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -181,41 +200,48 @@ path.link {
         <td>NAV</td>
         <td></td>
         <td></td>
+         <td id = "ETF31" style = "display:none" ></td>
       </tr>
       <tr class="info">
         <td>LATEST PRICE</td>
         <td></td>
         <td></td>
+         <td id = "ETF32" style = "display:none" ></td>
       </tr>
       <tr class="primary">
         <td>CURRENCY</td>
         <td></td>
         <td></td>
+         <td id = "ETF33" style = "display:none" ></td>
       </tr>
       <tr class="info">
         <td>FUND SIZE</td>
         <td></td>
         <td></td>
+         <td id = "ETF34" style = "display:none" ></td>
       </tr>
       <tr class="primary">
         <td>INCEPTION DATE</td>
         <td></td>
         <td></td>
+         <td id = "ETF35" style = "display:none" ></td>
         </tr>
         <tr class = "primary">
         <td>CLOSED FOR NEW CREATIONS</td>
         <td></td>
         <td></td>
+         <td id = "ETF36" style = "display:none" ></td>
       </tr>
       
       
     </tbody>
   </table>
+  <br>
 <!--table end -->
 
 <!--benchark -->
-<H3 id = "2"> BENCHMARK/OBJECTIVE </H3>
-          <table id = "bench" class="table table-striped table-bordered table-hover animated slideInLeft">
+<H3 style="display:inline" > BENCHMARK/OBJECTIVE </H3><img id = "2" src = "images/plus.png" width="12px" height="15px">
+          <table style="display:none" id = "bench" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
         <th>   </th>
@@ -254,12 +280,13 @@ path.link {
       
     </tbody>
   </table>
+  <br>
 <!--table end -->
 
 <!--REPLICATION -->
-<div class = "container">
-<H3 id = "3"> REPLICATION </H3>
-          <table id = "replication" class="table table-striped table-bordered table-hover animated slideInLeft">
+
+<H3 style="display:inline" > REPLICATION </H3><img id = "3" src = "images/plus.png" width="12px" height="15px">
+          <table style="display:none" id = "replication" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
         <th>   </th>
@@ -283,11 +310,12 @@ path.link {
       
     </tbody>
   </table>
+  <br>
 
 
-<h3 id = "4"> CREATION UNIT </h3>
+<h3 style="display:inline" > CREATION UNIT </h3><img id = "4" src = "images/plus.png" width="12px" height="15px">
 
-          <table ID ="creation "class="table table-striped table-bordered table-hover animated slideInLeft">
+          <table style="display:none" ID ="creation "class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
         <th>   </th>
@@ -312,10 +340,11 @@ path.link {
     </tbody>
   </table>
 <!--table end -->
+<br>
 
 <!--LIQ -->
-<H3 id = "5"> COSTS & LIQUIDITY</H3>
-          <table class="table table-striped table-bordered table-hover animated slideInLeft">
+<H3 style="display:inline" > COSTS & LIQUIDITY</H3><img id = "5" src = "images/plus.png" width="12px" height="15px">
+    <table style="display:none" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
         <th>   </th>
@@ -349,11 +378,67 @@ path.link {
       
     </tbody>
   </table>
+  <br>
 <!--table end -->
 
  <!--CONT -->
+ <H3 style="display:inline" > INCOME </H3><img id = "income_tag" src = "images/plus.png" width="12px" height="15px">
+ <table style="display:none" id = "income" class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="PRIMARY">
+        <td> DIVIDEND YIELD</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>DIVIDEND FREQUENCY </td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+     
+      
+    </tbody>
+  </table>
+  <br>
 
-</div>
+  <H3 style="display:inline" > FUND FLOWS</H3><img id = "income_tag" src = "images/plus.png" width="12px" height="15px">
+ <table style="display:none" id = "income" class="table table-striped table-bordered table-hover animated slideInLeft">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>ETF1</th>
+        <th>ETF2</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="PRIMARY">
+        <td> 1 MONTH</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="info">
+        <td>1 YEAR </td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+     
+      
+    </tbody>
+  </table>
+  <br>
+
+
 </div>
 
 
@@ -639,7 +724,7 @@ var data = {
         "name": "analytics",
         "children": [
             {
-            "name": "cluster",
+            "name": "HYG",
             "children": [
                 {
                 "name": "AgglomerativeCluster",
@@ -1543,6 +1628,15 @@ function printSelectedNodes() {
         }
     });
     console.log(selected);
+    $("#ETF3").show();
+     $("#ETF31").show();
+      $("#ETF32").show();
+
+       $("#ETF33").show();
+        $("#ETF34").show();
+         $("#ETF35").show();
+          $("#ETF36").show();
+
 }
 
 // Toggle children on click.
@@ -1573,7 +1667,7 @@ pdfbuttonlabel="Save  as PDF"
 
 <script>
 $("#CHOOSE").click(function(){
-    $("#chart").show();
+    $("#chart").toggle();
 });
 </script>
 
@@ -1615,9 +1709,12 @@ svg.selectAll("path")
     .style("fill", function() { return color(Math.random()); });
 
 function transition() {
+    console.log("entered");
   d3.selectAll("path")
       .data(function() {
+        console.log("inside");
         var d = layers1;
+         console.log("inside",d);
         layers1 = layers0;
         return layers0 = d;
       })
@@ -1670,8 +1767,26 @@ $("#4").click(function(){
             $("#creation").slideToggle('slow');
 
         });
+$("#tab").click(function(){
+            $("#creation").slideToggle('slow');
+
+        });
+$("#graphical").click(function(){
+            $("div#body").slideToggle('slow');
+
+        });
 
 
+</script>
+<script>
+$("#graphical").click(function(){
+    //console.log("gr clicked");
+    $("#detailed").hide();
+});
+$("#detailed_b").click(function(){
+    //console.log("gr clicked");
+    $("#detailed").show();
+});
 </script>
 
 </body>
