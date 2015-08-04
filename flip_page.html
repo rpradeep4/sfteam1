@@ -34,7 +34,7 @@
 
     <div data-role="content">    
 
-        <a href="table_try.html" data-role="button" data-theme="c" data-mini="true" id="change" data-transition="FLIP" data-direction="reverse">BACK</a>
+        <a href="#page2" data-role="button" data-theme="c" data-mini="true" id="change" data-transition="FLIP" data-direction="reverse">BACK1</a>
        
     </div><!-- /content -->
 
@@ -45,7 +45,7 @@
 </div><!-- /page -->
 
 
-<div data-role="dialog" id="page2" >
+<div data-role="page" id="page2" >
 
     <div data-role="header">
         <h1>HOLDINGS</h1>
@@ -65,16 +65,17 @@
 
 
 
-        <p><a href="file:///Users/roshnipradeep/Desktop/ProductComparison/table_try.html" data-role="button" data-theme="c" data-mini="true" id="change" data-transition="FLIP" data-direction="reverse">BACK</a></p>        
+        <p><a href="#" data-role="button" data-theme="c" data-mini="true" id="change" data-transition="FLIP" data-direction="reverse">BACK</a></p>        
     </div><!-- /content -->
 
 </div><!-- /page -->
 <script>
 
 $(document).ready(function(){
-
+$("#page1").show();
+$("#page2").show();
     $("#butt").click(function(){
-    //$("#page1").show();
+    //
     //$("#page2").show();
 
 });
