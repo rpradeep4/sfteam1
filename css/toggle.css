@@ -116,7 +116,7 @@ body{
   background-size: cover;  
 }
   
-trans{
+button .trans{
   background-color: Transparent;
   background: Transparent;
     background-repeat:no-repeat;
