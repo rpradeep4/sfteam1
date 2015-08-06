@@ -84,30 +84,46 @@
 		<!-- drag -->
 	
 	</head>
+
 	<body>
 		<!-- Compare basket -->
 		<div class="compare-basket">
-			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
+			<button class="action1 action--button action--compare" ><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
 		</div>
-		<img src = "images/tab.png" >
+		<img src = "images/tab.png" style = "position:absolute; top:0px;">
+		<img src = "images/tab3.png" style = "position:absolute; top:140px;">
+		<p>
+			<p>
 		<!-- Main view -->
 		<div class="view">
 			<!-- Blueprint header -->
 			<header class="bp-header cf">
 
-				<span class = "animted bounce"><strong> Add to Cart to finalize or click on + to add to comparison cart </strong></span>
-				<h1 class = "animated rubberBand"><strong>ETF Comparison Cart</strong></h1>
-				<nav>
+				
+				<BR><BR>
+					<!--
+				<h1 class = "animated rubberBand heading"><strong><span style="color: #336633;">ETF DIRECTORY</span></strong></h1>
+
+				<input type="text"  placeholder="Search for ETF " style = "position:absolute; top:150px; right:0;">
+				<nav>-->
+					<button id="c-button--push-left" class="trans" style = "position:absolute; top:142px; left:0;"></button>
 					
 
-						<a href="DROP_COMPARE.html">USE TOOLS</a>
-						<a href="COMPARE_BOARD.html">COMPARISON BUCKETS</a>
 	<div id="o-wrapper" class="o-wrapper">
 						  <div class="c-buttons">
         
-        <button id="c-button--push-left" class="c-button animated bounce">FILTERS</button>
+       <!-- <button id="c-button--push-left" class="c-button " style = "position:absolute; top:200px; left:0;">FILTERS</button>-->
+       <!--
+        <img src = "images/filter.png" height="62px" width="52px" id="c-button--push-left"  style = "position:absolute; top:150px; left:0;">
+
+         <img src = "images/allb.png" height="162px" width="152px"  style = "position:absolute; top:200px; left:163px;">
+        <img src = "images/isharesb.png" height="192px" width="182px" style = "position:absolute; top:200px; left:383px;">
+        <img src = "images/fav.png" height="192px" width="182px" style = "position:absolute; top:200px; left:583px;">
+        <img id = "rec" src = "images/rec.png" height="162px" width="152px" style = "position:absolute; top:200px; left:783px;" >
+        <img src = "images/what.png" height="162px" width="152px" style = "position:absolute; top:200px; left:1013px;">
+      -->
       
-        <button id="c-button--push-top" class="c-button animated bounce">TRENDING</button>
+       <!--  <button id="c-button--push-right" class="c-button" style = "position:absolute; top:230px; right:0;">CURRENT TRENDS</button>-->
        
       </div>
 	</div>		
@@ -139,15 +155,17 @@
 <nav id="c-menu--push-left" class="c-menu c-menu--push-left ">
   <button class="c-menu__close">&larr; Close Menu</button>
   <ul class="c-menu__items">
-    <li class="c-menu__item"><a href="#" class="c-menu__link">Home</a></li>
+  
+   
+   
      <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>DURATION</a></li>
       <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>VOLUME/LIQUIDITY</a></li>
        <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>PTE</a></li>
     <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>YIELD</a></li>
     <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex5" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>BID ASK SPREAD</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><INPUT type="checkbox">EMERGING MARKET</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><INPUT id = "rec" type="checkbox">RECENT SEARCHES</a></li>
- 	
+    <li class="c-menu__item"><a href="#" class="c-menu__link"><input type="checkbox">EMERGING MARKET</a></li>
+
+   
  	<li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>HAVE A QUESTION?</STRONG></a></li>
  	
  	<li class="c-menu__item"><a href="javascript:history.go(-1)" class="c-menu__link"><STRONG>RESET</STRONG></a></li>
@@ -155,11 +173,30 @@
   </ul>
 </nav>
 
+<!--trends-->
+
+<nav id="c-menu--push-right" class="c-menu c-menu--push-right">
+  <button class="c-menu__close">Close Menu &rarr;</button>
+  <ul class="c-menu__items">
+    <li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>#APL<img = src = "images/trend.png" width= "45px", height="95px"></STRONG></a>
+    	<BR>
+    		"<I>SENTIMENTS</I>"</li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>#HYG</STRONG></a>
+    	<BR>
+    		"<I>SENTIMENTS</I>"</li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>#TLH </STRONG></a>
+    	<BR>
+    		"<I>SENTIMENTS</I>"</li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Work</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Contact</a></li>
+  </ul>
+</nav><!-- /c-menu push-right -->
+
 
 <div id="c-mask" class="c-mask"></div>
 
 <!-- filters -->
-
+<!--
 <div id = "car" style = "display:none" class="wrapper">
            
           
@@ -167,7 +204,9 @@
             <div id = "car" class="jcarousel-wrapper">
                 <div id = "car"  class="jcarousel">
                     <ul>
-
+                    	<li><input id = "show_all" type="checkbox">SHOW ALL ETF'S</li>
+                        <li></li>
+                         <li> </li>
                     	<li>  <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>DURATION</li>
                         <li> </li>
                         <li></li>
@@ -183,16 +222,16 @@
                         <li> <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>YIELD</li> 
                         <li></li>
                          <li> </li>
-                        <li><INPUT type="checkbox">EMERGING MARKET</li>
+                        <li><input type="checkbox">EMERGING MARKET</li>
                         <li></li>
                          <li> </li>
-                         <li><INPUT id = "rec" type="checkbox">RECENT SEARCHES</li>
+                         <li ><input id = "rec" type="checkbox">RECENT SEARCHES</li>
                         <li></li>
                          <li> </li>
-                         <li><INPUT id = "rec" type="checkbox">SAVE THIS SEARCH</li>
+                         <li><input id = "rec1" type="checkbox">SAVE THIS SEARCH</li>
                         <li></li>
                          <li> </li>
-                          <li><INPUT id = "rec" type="search" placeholder="Type ETF Name">SEARCH</li>
+                          <li><input id = "rec2" type="search" placeholder="Type ETF Name">SEARCH</li>
                           <li></li>
                          <li> </li>
 
@@ -205,11 +244,11 @@
                 <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                 <a href="#" class="jcarousel-control-next">&rsaquo;</a>
 
-               <!--<p class="jcarousel-pagination"></p>-->
+               <p class="jcarousel-pagination"></p>
             </div>
         </div>
 
-
+--><!--end side filters-->
 
 
 		
@@ -309,14 +348,7 @@
       </div>
       <div class="modal-body">
        
-        	<button type="button" style ="display:inline" class="btn btn-info btn-lg " id = "">WHY THIS ETF</button>
-        	<button type="button" style ="display:inline" class="btn btn-primary btn-lg  "id = "butt1">CHART & RETURNS</button>
         	
-        	<button type="button" style ="display:inline" id = "butt3" class="btn btn-danger btn-lg ">DISTRIBUTIONS</button>
-        	<button type="button" style ="display:inline" id = "butt4" class="btn btn-info btn-lg ">PREMIUM DISCOUNT
-        	</button>
-        	<button type="button" style ="display:inline" id = "butt5" class="btn btn-warning btn-lg ">HOLDINGS
-        	</button>
 
         	<div class="flip-container-1" id = "img_chart" style="display:none" ontouchstart="this.classList.toggle('hover1');">
         	<img src="images/g1.png" alt="graph here" style="width:704px;height:458px;">
@@ -381,25 +413,37 @@
 <!--side bar -->
 
 			<!-- Product grid -->
-			<section class="grid">
+			<section class="grid" style="position:absolute; top:345px;" background="images/tab2.png">
 				<!--drag-->
 
  <!--end div -->
 				<!--drag end-->
 
 				<!-- Products -->
+				<br>
+				<br>
+				<p>
+					<p>
+						<p>
+							<p>
+								<p>
 
-				<div id = "myDiv" class="product" style = "height = 250px;" >
+				<div id = "myDiv" class="product"  >
 					<div id = "myDiv" class="product__info" >
 						
-
-
-						<div id = "myDiv" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
+							
+						<div id = "myDiv" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv" class="flipper">
-						    <div id = "myDiv" class="front">
+
+						    <div id = "myDiv" class="front" style = "position:absolute; ">
 						      <!-- front content -->
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												
 						      
-						      <img class="product__image" src="images/1.png" alt="Product 1" style="width:224px,height:250px;"/>
+						      <img class="product__image" src="images/1_1.png" alt="Product 1" style="width:274px,height:300px;"/>
+						      <img  class="product__image" src="images/1_2.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
+
+						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						      <span class="product__year extra highlight">2011</span>
 						<span class="product__region extra highlight">Douro</span>
 						<span class="product__varietal extra highlight">Touriga Nacional</span>
@@ -411,23 +455,14 @@
 						    
 						    <div id = "myDiv" class="back">
 						      <!-- back content -->
+						       <img class="product__image" src="images/1_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 						      					 
-						      
+						      					
 												
 
-												<label class="action action--compare-add"><input type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
+											
 
 												
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
-
-												<!--
-												<a class="" href="https://business.pinterest.com/en/set-your-business-account" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="32"><img src="images/pin.png" width = "54" height="54"/></a>
-												<a class = "" href="https://business.pinterest.com/en/set-your-business-account" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="32"><img src="images/g+.png" width = "54" height="54"/></a>
-											-->
-
-												<!--<a href="new.html" data-rel="dialog" data-transition="FLIP" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">CLICK TO KNOW MORE</a></td><br>-->
-												<span class ="glyphicon glyphicon-th-list"></span>
 												
 											
 
@@ -439,6 +474,21 @@
 					</div>
 				<!----></div><!-- prod info-->
 			</div>
+
+			<!--trialllll -->
+			<!--
+			<div id = "blah" class="flip-container-try">
+	<div id = "ta" class="flipper" >
+	<button class="flipper" onclick="document.querySelector('#ta').classList.toggle('flipped')"> click </button>
+		<div class="front">
+			Front
+			 <img class="product__image" src="images/2.png" alt="Product 1" />
+		</div>
+		<div class="back">
+			Back
+		</div>
+	</div>
+</div>-->
 				
 <!--original-->
 <div id = "original" class="product" style="display:none">
@@ -464,10 +514,11 @@
 				<div id = "myDiv2" class="product">
 					
 					<div id = "myDiv2" class="product__info" >
-						<div id = "myDiv2" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						<div id = "myDiv2" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv2" class="flipper">
-						    <div id = "myDiv2" class="front">
+						    <div id = "myDiv2" class="front" >
 						      <!-- front content -->
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/2.png" alt="Product 1" />
 						     
@@ -477,17 +528,27 @@
 						      <!-- back content -->
 						      					 
 						      
+												 <img class="product__image" src="images/2_b.png" alt="Product 1" style="width:274px,height:300px;"/>
+						      				
 												
-						      					<br><br><br>
-												
+						      					
+						      					
+												<br>
+												<br>
+												<!--
+												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
+												<br>
+												<br>
+
 
 												
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
-
-												<label class="action action--compare-add"><input type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
 												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+												<img src = "images/pin1.png" width="45px" height="205px"><span class="action__text action__text--invisible">Pin this</span>
+												<img src = "images/mail.png" width="45px" height="205px">
+
+												
+												
+												
 
 
 							</div>
@@ -501,10 +562,11 @@
 				<!--3rd-->
 				<div id = "myDiv3" class="product">
 					<div id = "myDiv3" class="product__info" >
-						<div id = "myDiv3" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
+						<div id = "myDiv3" class="flipper" onclick="this.classList.toggle('flipped')" >
 						  <div id = "myDiv3" class="flipper">
-						    <div id = "myDiv3" class="front">
+						    <div id = "myDiv3" class="front" >
 						      <!-- front content -->
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/3.png" alt="Product 1" />
 						     
@@ -512,18 +574,21 @@
 						    
 						    <div id = "myDiv3" class="back">
 						      <!-- back content -->
-						      					 
-						      
+						      				 <img class="product__image" src="images/3_b.png" alt="Product 1" style="width:274px,height:300px;"/>
+						      					
+												<br><br>
+
+												<!--<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
+												<br>
+												<br>
+
+
 												
-
-												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
-
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
-
 												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
--->
+												<img src = "images/pin1.png" width="45px" height="205px">
+												<img src = "images/mail.png" width="45px" height="205px">
+
+											
 
 
 							</div>
@@ -536,12 +601,14 @@
 				<!--4-->
 				<div id = "myDiv4" class="product">
 					<div id = "myDiv4" class="product__info" >
-						<div id = "myDiv4" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						<div id = "myDiv4" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv4" class="flipper">
-						    <div id = "myDiv4" class="front">
+						    <div id = "myDiv4" class="front" >
 						      <!-- front content -->
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						    
 						      <img class="product__image" src="images/4.png" alt="Product 1" />
+						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						     
 						    </div>
 						    
@@ -550,16 +617,20 @@
 						      					 
 						      
 												
+						      					 <img class="product__image" src="images/4_b.png" alt="Product 1" style="width:274px,height:300px;"/>
+												
+												<br><br>
 
-												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
 
+												
+												<br>
+												<br>
 
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
 
 												
 												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+												<img src = "images/pin1.png" width="45px" height="205px">
+												<img src = "images/mail.png" width="45px" height="205px">
 
 
 							</div>
@@ -572,11 +643,13 @@
 				<!--5-->
 				<div id = "myDiv5" class="product">
 					<div id = "myDiv5" class="product__info" >
-						<div id = "myDiv5" class="flip-container1" ontouchstart="this.classList.toggle('hover1');">
+						<div id = "myDiv5" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv5" class="flipper">
-						    <div id = "myDiv5" class="front">
+						    <div id = "myDiv5" class="front" >
+						    	<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/5.png" alt="Product 1" />
+						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						     
 						    </div>
 						    
@@ -584,13 +657,21 @@
 						      <!-- back content -->
 						      					 
 						      
+												 <img class="product__image" src="images/5_b.png" alt="Product 1" style="width:274px,height:300px;"/>
+
 												
-
-												<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
+												<br><br>
 
 
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
+												
+												<br>
+												<br>
+
+
+												
+												
+												<img src = "images/pin1.png" width="45px" height="205px">
+												<img src = "images/mail.png" width="45px" height="205px">
 
 												
 											
@@ -607,31 +688,32 @@
 <div id = "myDiv6" class="product">
 					
 					<div id = "myDiv6" class="product__info" >
-						<div id = "myDiv6" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						<div id = "myDiv6" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv6" class="flipper">
-						    <div id = "myDiv6" class="front">
+						    <div id = "myDiv6" class="front" >
 						      <!-- front content -->
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/6.png" alt="Product 1" />
+						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
+
 						     
 						    </div>
 						    
 						    <div id = "myDiv6" class="back">
 						      <!-- back content -->
 						      					 
-						      
+						      					 <img class="product__image" src="images/6_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 												
 						      					<br><br><br>
 												
 
-												
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
+												<br><br>
 
-												<label class="action action--compare-add"><input type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
-												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+												<img src = "images/pin1.png" width="45px" height="205px">
+												<img src = "images/mail.png" width="45px" height="205px">
 
+												
 
 							</div>
 
@@ -650,16 +732,20 @@
 				<div id = "myDiv7" class="product">
 					
 					<div id = "myDiv7" class="product__info" >
-						<div id = "myDiv7" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						<div id = "myDiv7" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv7" class="flipper">
-						    <div id = "myDiv7" class="front">
+						    <div id = "myDiv7" class="front" >
 						      <!-- front content -->
-						    
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+
+											
 						      <img class="product__image" src="images/2.png" alt="Product 1" />
 						     
 						    </div>
 						    
 						    <div id = "myDiv7" class="back">
+						    <!--<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
+
 						      <!-- back content -->
 						      					 
 						      
@@ -668,12 +754,14 @@
 												
 
 												
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
-
-												<label class="action action--compare-add"><input type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
 												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+												<br><br>
+
+												<img src = "images/pin1.png" width="45px" height="205px">
+												<img src = "images/mail.png" width="45px" height="205px">
+
+												
+												
 
 
 							</div>
@@ -688,12 +776,15 @@
 				<div id = "myDiv7" class="product">
 					
 					<div id = "myDiv8" class="product__info" >
-						<div id = "myDiv8" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						<div id = "myDiv8" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv8" class="flipper">
-						    <div id = "myDiv8" class="front">
+						    <div id = "myDiv8" class="front" >
 						      <!-- front content -->
-						     
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+
+												
 						      <img class="product__image" src="images/2.png" alt="Product 1" />
+						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						     
 						    </div>
 						    
@@ -706,13 +797,10 @@
 												
 
 												
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
-
-												<label class="action action--compare-add"><input type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-												<br><br><br>
 												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
 
+												<br><br><br>
+											
 
 							</div>
 
@@ -727,11 +815,12 @@
 				<div id = "myDiv9" class="product">
 					
 					<div id = "myDiv9" class="product__info" >
-						<div id = "myDiv9" class="flip-container1" ontouchstart="this.classList.toggle('hover');">
+						<div id = "myDiv9" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv9" class="flipper">
-						    <div id = "myDiv9" class="front">
+						    <div id = "myDiv9" class="front" >
 						      <!-- front content -->
-						    
+						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+						     
 						      <img class="product__image" src="images/5.png" alt="Product 1" />
 						     
 						    </div>
@@ -745,9 +834,9 @@
 												
 
 												
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>
+												<!--<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 
-												<label class="action action--compare-add"><input type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
+												
 												<br><br><br>
 												
 												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
@@ -2224,7 +2313,7 @@ $("#cdx").click(function(){
 
 
 <script>
-
+/*
 //Constants for the SVG
 var width = 500,
     height = 500;
@@ -2318,11 +2407,11 @@ force.on("tick", function () {
     //End Changed
 
 });
-
+*/
 
 </script>
 	<script>
-
+/*
 //Constants for the SVG
 var width = 500,
     height = 500;
@@ -2433,7 +2522,7 @@ svg.on("mousemove", function() {
           .attr("x2", function(d) { return d.target.fisheye.x; })
           .attr("y2", function(d) { return d.target.fisheye.y; });
     });
-
+*/
 </script>
 
 <!--<acript>-->
@@ -2527,6 +2616,32 @@ $(function () {
   });
 
 		</script>
+		<script>
+		/*$("#img_tog").click(function(){
+			//$("div#myDiv").toggleClass("hover1");
+			document.querySelector('div#myDiv').classList.toggle('hover1');
+		})
+*/
+
+  /**
+   * Push right instantiation and action.
+   */
+  var pushRight = new Menu({
+    wrapper: '#o-wrapper',
+    type: 'push-right',
+    menuOpenerClass: '.c-button',
+    maskId: '#c-mask'
+  });
+
+  var pushRightBtn = document.querySelector('#c-button--push-right');
+  
+  pushRightBtn.addEventListener('click', function(e) {
+    e.preventDefault;
+    pushRight.open();
+  });
+
+		</script>
+
 
 		<!--ytm highchart -->
 		   

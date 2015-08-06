@@ -52,20 +52,21 @@
 	display: inline-block;
 	vertical-align: top;
 	min-width: 16em;
-	margin: 0 1em 2.5em;
-	padding: 1.5em 1.5em 2em;
+	/*margin: 0 1em 2.5em;
+	padding: 1.5em 1.5em 2em;*/
+	margin: 0 1em 2.0em;
+	padding: 0em 0em 0em;
 	background: #FFFFFF;
 	border-radius: 15px;
 	width:224px;
-	height:250px;
+	height:220px;
 }
 
 .product--selected {
-	box-shadow: 0 0 0 12px #20b2aa;
+	box-shadow: 0 0 0 0px #000;
 
-	height : 250px;
+	height : 220px;
 }
-
 .flexbox .product {
 	display: block;
 	-webkit-flex: 0 0 16em;
@@ -76,7 +77,7 @@
 /* product info */
 .product__info > span {
 	display: block;
-	padding: 1em 0;
+	padding: 0em 0;
 }
 
 /* since we'll be using the product info inside of the comparison, we'll hide the extra info for the grid view */
@@ -90,10 +91,11 @@
 	max-width: 100%;
 	-webkit-transform-origin: 50% 100%;
 	transform-origin: 50% 100%;
+
 }
 
 .product:hover .product__image {
-	-webkit-animation: swing 0.9s forwards;	
+	/*-webkit-animation: swing 0.9s forwards;	*/
 	/*animation: swing 0.6s backwards;	*/
 }
 
@@ -157,15 +159,30 @@
 	color: #797BED;
 }
 
-.action {
+.action1 {
 	display: inline-block;
-	font-size: 1em;
+	font-size: 1.05em;
 	white-space: nowrap;
 	padding: 0.85em 1.25em;
+	/*padding: 01.50em 12.95em;*/
 	cursor: pointer;
 	border: none;
 	background: transparent;
 	text-align: center;
+
+}
+.action{
+	display: inline-block;
+	font-size: 1.55em;
+	white-space: nowrap;
+	/*padding: 0.85em 1.25em;*/
+	padding: 00.50em 8.95em;
+	cursor: pointer;
+	border: black;
+	/*background: transparent;*/
+	background: transparent;
+	text-align: center;
+
 }
 
 .action:focus {
@@ -173,7 +190,7 @@
 }
 
 .action--button {
-	background: #2C2D34;
+	background: #000;
 	color: #fff;
 	border-radius: 2px;
 	-webkit-transition: background 0.2s;
@@ -201,7 +218,7 @@
 }
 
 .action--button i + span {
-	margin-left: 1em;
+	margin-left: 0em;
 }
 
 .flexbox .action--buy {
@@ -220,7 +237,8 @@
 	top: 0;
 	right: 0;
 	font-size: 1.5em;
-	color: #ddd;
+	/*color: #ddd;*/
+	color: #424542;
 	pointer-events: none;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, background 0.2s;
@@ -236,7 +254,7 @@
 
 .action--close:hover,
 .action--close:focus {
-	color: #797000;
+	color: #424542;
 }
 
 .action--compare {
@@ -245,7 +263,8 @@
 	pointer-events: none;
 	cursor: default;
 	background-color: #000000;
-	color: #565B6C;
+	/*color: #565B6C;*/
+	color: #424542;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
@@ -265,7 +284,8 @@
 .action--remove {
 	position: absolute;
 	overflow: hidden;
-	color: #ddd;
+	/*color: #ddd;*/
+	color: #424542;
 	top: 0px;
 	right: 2px;
 	padding: 0;
@@ -273,7 +293,8 @@
 }
 
 .action--compare-add {
-	color: #ddd;
+	/*color: #ddd;*/
+	color: #424542;
 	position: absolute;
 	top: 10px;
 	right: 5px;
@@ -284,6 +305,7 @@
 	top: 35px;
 	right: 10px;
 	color: #ddd;
+	/*color: #424542;*/
 	font-size: 75%;
 	letter-spacing: 0;
 	background: #2F3035;
@@ -293,7 +315,8 @@
 
 .action--remove:hover,
 .action--compare-add:hover {
-	color: #5C5EDC;
+	/*color: #5C5EDC;*/
+	color: #424542;
 }
 
 .action--compare-add .fa-check,
@@ -303,7 +326,8 @@
 
 .action--compare-add input[type=checkbox]:checked ~ .fa-check {
 	display: block;
-	color: #5C5EDC;
+	/*color: #5C5EDC;*/
+	color: #424542;
 }
 
 .check-hidden {
@@ -426,7 +450,8 @@
 .compare__item {
 	height: 100%;
 	width: 50%;
-	background: #24252A;
+	/*background: #24252A;*/
+	background: #fff;
 	text-align: center;
 	cursor: default;
 	padding: 2em 0;
@@ -440,7 +465,8 @@
 }
 
 .compare__item:nth-of-type(2) {
-	background: #212227;
+	/*background: #212227;*/
+	background: #fff;
 }
 
 .compare__item .product__title {

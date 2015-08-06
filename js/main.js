@@ -122,21 +122,50 @@
 		for(var i = 0; i < this.totalItems; ++i) {
 			console.log("comparing");
 			var compareItemWrapper = document.createElement('div');
+			compareItemWrapper.setAttribute('style','overflow:auto');
 			compareItemWrapper.className = 'compare__item';
 
 			var compareItemEffectEl = document.createElement('div');
+			compareItemEffectEl.setAttribute('style','overflow:auto');
 			compareItemEffectEl.className = 'compare__effect';
 
 			compareItemEffectEl.innerHTML = this.items[i].getAttribute('data-info');
+			var title1 = document.createElement('p');
+			var title2 = document.createElement('p');
+			var t = document.createTextNode("RISK FACTOR BREAKDOWN");
+			var t2 = document.createTextNode("RETURN BREAKDOWN");
+			title1.appendChild(t);
+			title2.appendChild(t2);
 
+			//title1 = "";
+			//var title2 = document.createElement('p');
+			//title2 = "";
+			var risk_img = document.createElement('img');
+			var risk_img1 = document.createElement('img');
+			var risk_img3 = document.createElement('img');
+			var br = document.createElement('br');
+			risk_img.src = "images/risk11.png";
+			risk_img1.src = "images/risk12.png";
+			risk_img3.src = "images/risk12.png";
+			var risk_img2 = document.createElement('img');
+			risk_img2.src = "images/risk2.png";
 			var a = document.createElement('a');
-			a.text ='ANALYSIS'
+			a.text =' DETAILED ANALYSIS'
 			
 
 			
 			a.href = "table_try.html";
 			//document.body.appendChild(a);
 			compareItemWrapper.appendChild(compareItemEffectEl);
+			compareItemWrapper.appendChild(title1);
+			compareItemWrapper.appendChild(risk_img);
+			compareItemWrapper.appendChild(risk_img3);
+			compareItemWrapper.appendChild(br);
+			compareItemWrapper.appendChild(br);
+			compareItemWrapper.appendChild(title2);
+			compareItemWrapper.appendChild(risk_img2);
+			compareItemWrapper.appendChild(risk_img1);
+			compareItemWrapper.appendChild(br);
 			compareItemWrapper.appendChild(a);
 
 			this.compareWrapper.insertBefore(compareItemWrapper, this.compareWrapper.childNodes[0]);
