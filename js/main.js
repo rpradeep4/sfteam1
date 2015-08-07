@@ -134,6 +134,7 @@
 			var title2 = document.createElement('p');
 			var t = document.createTextNode("RISK FACTOR BREAKDOWN");
 			var t2 = document.createTextNode("RETURN BREAKDOWN");
+			
 			title1.appendChild(t);
 			title2.appendChild(t2);
 
@@ -147,8 +148,12 @@
 			risk_img.src = "images/risk11.png";
 			risk_img1.src = "images/risk12.png";
 			risk_img3.src = "images/risk12.png";
+			risk_img.style.width = "450px"
+			risk_img3.style.width = "450px"
+			risk_img1.style.width = "450px"
 			var risk_img2 = document.createElement('img');
 			risk_img2.src = "images/risk2.png";
+			risk_img2.style.width = "450px"
 			var a = document.createElement('a');
 			a.text =' DETAILED ANALYSIS'
 			

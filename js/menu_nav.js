@@ -47,6 +47,7 @@
    * Initialise Menu.
    */
   Menu.prototype._init = function() {
+    console.log("in menu creation");
     this.body = document.body;
     this.wrapper = document.querySelector(this.options.wrapper);
     this.mask = document.querySelector(this.options.maskId);

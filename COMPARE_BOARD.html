@@ -90,9 +90,14 @@
 		<div class="compare-basket">
 			<button class="action1 action--button action--compare" ><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
 		</div>
-		<img src = "images/tab.png" style = "position:absolute; top:0px;">
-		<img src = "images/tab3.png" style = "position:absolute; top:140px;">
+		<img src = "images/tab.png" width:"2093px" style = "position:absolute; top:0px;right:0px;">
+		<img src = "images/etf_dir.png" width:"3093px" style = "position:absolute; top:140px; background-size: cover">
+		<!--<img src = "images/etf_dir.png" style = "position:absolute; top:140px;background-size: cover;">-->
 		<!--<button class="trans" style = "position:absolute; top:280px;left:1093px" data-toggle="modal" data-target="#myModal"> what if </button>-->
+		<!--what if trans button -->
+		<img src = "images/transparent.png" style = "position:absolute; top:270px;left:1083px" data-toggle="modal" data-target="#myModal">
+		<!-- ishares transparent button -->
+		<img src = "images/transparent.png" style = "position:absolute; top:260px;left:233px" id="ishares">
 		<p>
 			<p>
 		<!-- Main view -->
@@ -107,24 +112,15 @@
 
 				<input type="text"  placeholder="Search for ETF " style = "position:absolute; top:150px; right:0;">
 				<nav>-->
-					<button id="c-button--push-left" class="trans" style = "position:absolute; top:142px; left:0;"></button>
+					<button id="c-button--push-left" class="trans" ><img src="images/fil.png" style = "position:absolute; top:142px; left:0;"></button>
+					 
 					
 
 	<div id="o-wrapper" class="o-wrapper">
 						  <div class="c-buttons">
         
-       <!-- <button id="c-button--push-left" class="c-button " style = "position:absolute; top:200px; left:0;">FILTERS</button>-->
-       <!--
-        <img src = "images/filter.png" height="62px" width="52px" id="c-button--push-left"  style = "position:absolute; top:150px; left:0;">
-
-         <img src = "images/allb.png" height="162px" width="152px"  style = "position:absolute; top:200px; left:163px;">
-        <img src = "images/isharesb.png" height="192px" width="182px" style = "position:absolute; top:200px; left:383px;">
-        <img src = "images/fav.png" height="192px" width="182px" style = "position:absolute; top:200px; left:583px;">
-        <img id = "rec" src = "images/rec.png" height="162px" width="152px" style = "position:absolute; top:200px; left:783px;" >
-        <img src = "images/what.png" height="162px" width="152px" style = "position:absolute; top:200px; left:1013px;">
-      -->
       
-       <!--  <button id="c-button--push-right" class="c-button" style = "position:absolute; top:230px; right:0;">CURRENT TRENDS</button>-->
+        <button id="c-button--push-right"  class="trans" ><img src = "images/sym.png" width="150px"  style = "position:absolute; top:32px; right:44px;"></button>
        
       </div>
 	</div>		
@@ -152,44 +148,31 @@
     <li class="c-menu__item"><a href="#" class="c-menu__link"><strong>#TLH</strong></a></li>
   </ul>
 </nav>
-
+<!--filter menu-->
 <nav id="c-menu--push-left" class="c-menu c-menu--push-left ">
-  <button class="c-menu__close">&larr; Close Menu</button>
+  <button class="c-menu__close"></button>
   <ul class="c-menu__items">
   
    
    
-     <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>DURATION</a></li>
-      <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>VOLUME/LIQUIDITY</a></li>
-       <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>PTE</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>YIELD</a></li>
+     <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex1" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>DURATION</a></li>
+      <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>VOLUME/LIQUIDITY</a></li>
+       <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex3" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>PTE</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex4" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>YIELD</a></li>
     <li class="c-menu__item"><a href="#" class="c-menu__link"><input id="ex5" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>BID ASK SPREAD</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><input type="checkbox">EMERGING MARKET</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link"><input type="checkbox">&nbsp EMERGING MARKET</a></li>
 
-   
- 	<li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>HAVE A QUESTION?</STRONG></a></li>
- 	
- 	<li class="c-menu__item"><a href="javascript:history.go(-1)" class="c-menu__link"><STRONG>RESET</STRONG></a></li>
 
   </ul>
-</nav>
+</nav> 
 
 <!--trends-->
 
 <nav id="c-menu--push-right" class="c-menu c-menu--push-right">
-  <button class="c-menu__close">Close Menu &rarr;</button>
+   <button class="c-menu__close"><img src ="images/sym.png" > </button>
   <ul class="c-menu__items">
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>#APL<img = src = "images/trend.png" width= "45px", height="95px"></STRONG></a>
-    	<BR>
-    		"<I>SENTIMENTS</I>"</li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>#HYG</STRONG></a>
-    	<BR>
-    		"<I>SENTIMENTS</I>"</li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link"><STRONG>#TLH </STRONG></a>
-    	<BR>
-    		"<I>SENTIMENTS</I>"</li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">Work</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">Contact</a></li>
+    
+    
   </ul>
 </nav><!-- /c-menu push-right -->
 
@@ -414,7 +397,8 @@
 <!--side bar -->
 
 			<!-- Product grid -->
-			<section class="grid" style="position:absolute; top:345px;" background="images/tab2.png">
+			
+			<section class="grid" style="position:absolute; top:245px;" >
 				<!--drag-->
 
  <!--end div -->
@@ -428,6 +412,7 @@
 						<p>
 							<p>
 								<p>
+									<p><p><p>
 
 				<div id = "myDiv" class="product"  >
 					<div id = "myDiv" class="product__info" >
@@ -441,8 +426,8 @@
 						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 												
 						      
-						      <img class="product__image" src="images/1_1.png" alt="Product 1" style="width:274px,height:300px;"/>
-						      <img  class="product__image" src="images/1_2.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
+						      <img class="product__image " src="images/1.png" alt="Product 1" style="width:274px,height:300px;"/>
+						      <img  class="product__image inner-image " src="images/transparent.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
 
 						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						      <span class="product__year extra highlight">2011</span>
@@ -522,6 +507,7 @@
 						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/2.png" alt="Product 1" />
+						        <img  class="product__image inner-image " src="images/transparent.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
 						     
 						    </div>
 						    
@@ -532,21 +518,10 @@
 												 <img class="product__image" src="images/2_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 						      				
 												
-						      					
-						      					
-												<br>
-												<br>
-												<!--
-												<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
-												<br>
-												<br>
 
 
 												
 												
-												<img src = "images/pin1.png" width="45px" height="205px"><span class="action__text action__text--invisible">Pin this</span>
-												<img src = "images/mail.png" width="45px" height="205px">
-
 												
 												
 												
@@ -570,6 +545,7 @@
 						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/3.png" alt="Product 1" />
+						       <img  class="product__image inner-image " src="images/transparent.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
 						     
 						    </div>
 						    
@@ -577,17 +553,7 @@
 						      <!-- back content -->
 						      				 <img class="product__image" src="images/3_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 						      					
-												<br><br>
-
-												<!--<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
-												<br>
-												<br>
-
-
 												
-												
-												<img src = "images/pin1.png" width="45px" height="205px">
-												<img src = "images/mail.png" width="45px" height="205px">
 
 											
 
@@ -609,6 +575,7 @@
 						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						    
 						      <img class="product__image" src="images/4.png" alt="Product 1" />
+						       <img  class="product__image inner-image " src="images/transparent.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
 						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						     
 						    </div>
@@ -620,18 +587,7 @@
 												
 						      					 <img class="product__image" src="images/4_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 												
-												<br><br>
-
-
 												
-												<br>
-												<br>
-
-
-												
-												
-												<img src = "images/pin1.png" width="45px" height="205px">
-												<img src = "images/mail.png" width="45px" height="205px">
 
 
 							</div>
@@ -650,6 +606,7 @@
 						    	<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/5.png" alt="Product 1" />
+						       <img  class="product__image inner-image " src="images/transparent.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
 						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 						     
 						    </div>
@@ -661,19 +618,8 @@
 												 <img class="product__image" src="images/5_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 
 												
-												<br><br>
 
-
-												
-												<br>
-												<br>
-
-
-												
-												
-												<img src = "images/pin1.png" width="45px" height="205px">
-												<img src = "images/mail.png" width="45px" height="205px">
-
+											
 												
 											
 
@@ -696,6 +642,7 @@
 						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 						     
 						      <img class="product__image" src="images/6.png" alt="Product 1" />
+						       <img  class="product__image inner-image " src="images/transparent.png" alt="Product 1" style="width:274px,height:270px;" data-toggle="modal" data-target="#myModal"/>
 						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
 
 						     
@@ -706,14 +653,9 @@
 						      					 
 						      					 <img class="product__image" src="images/6_b.png" alt="Product 1" style="width:274px,height:300px;"/>
 												
-						      					<br><br><br>
+						      					
+
 												
-
-												<br><br>
-
-												<img src = "images/pin1.png" width="45px" height="205px">
-												<img src = "images/mail.png" width="45px" height="205px">
-
 												
 
 							</div>
@@ -730,13 +672,14 @@
 
 
 				<!--7-->
+				
 				<div id = "myDiv7" class="product">
 					
 					<div id = "myDiv7" class="product__info" >
 						<div id = "myDiv7" class="flipper" onclick="this.classList.toggle('flipped')">
 						  <div id = "myDiv7" class="flipper">
 						    <div id = "myDiv7" class="front" >
-						      <!-- front content -->
+						     
 						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
 
 											
@@ -750,16 +693,7 @@
 						      <!-- back content -->
 						      					 
 						      
-												
-						      					<br><br><br>
-												
-
-												
-												
-												<br><br>
-
-												<img src = "images/pin1.png" width="45px" height="205px">
-												<img src = "images/mail.png" width="45px" height="205px">
+											
 
 												
 												
@@ -793,14 +727,6 @@
 						      <!-- back content -->
 						      					 
 						      
-												
-						      					<br><br><br>
-												
-
-												
-												
-
-												<br><br><br>
 											
 
 							</div>
@@ -830,17 +756,7 @@
 						      <!-- back content -->
 						      					 
 						      
-												
-						      					<br><br><br>
-												
-
-												
-												<!--<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
-
-												
-												<br><br><br>
-												
-												<!--<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>-->
+											
 
 
 							</div>
@@ -1006,6 +922,19 @@ $("#cdx").click(function(){
 		//console.log("click tool");
     $("div#grid").slideToggle("slow");
      $("div#drop-area1").slideToggle("slow");
+
+});
+
+$("#ishares").click(function(){
+		//$("#car").show();
+		console.log("click tool");
+		$("div#myDiv3").hide();
+		//$("div#myDiv4").hide();
+		$("div#myDiv6").hide();
+		$("div#myDiv7").hide();
+		$("div#myDiv8").hide();
+		$("div#myDiv9").hide();
+  
 
 });
 
@@ -2587,6 +2516,7 @@ $(function () {
   });
 
   var pushLeftBtn = document.querySelector('#c-button--push-left');
+  console.log("ql",pushLeftBtn);
   
   pushLeftBtn.addEventListener('click', function(e) {
   	console.log("push left clicked");
@@ -2596,47 +2526,23 @@ $(function () {
 			
 		</script>
 
-	
 		<script>
-			
-  /**
-   * Push top instantiation and action.
-   */
-  var pushTop = new Menu({
-    wrapper: '#o-wrapper',
-    type: 'push-top',
-    menuOpenerClass: '.c-button',
-    maskId: '#c-mask'
-  });
-
-  var pushTopBtn = document.querySelector('#c-button--push-top');
-  
-  pushTopBtn.addEventListener('click', function(e) {
-    e.preventDefault;
-    pushTop.open();
-  });
-
-		</script>
-		<script>
-		/*$("#img_tog").click(function(){
-			//$("div#myDiv").toggleClass("hover1");
-			document.querySelector('div#myDiv').classList.toggle('hover1');
-		})
-*/
-
+		
   /**
    * Push right instantiation and action.
-   */
+   */console.log("in script");
   var pushRight = new Menu({
     wrapper: '#o-wrapper',
     type: 'push-right',
     menuOpenerClass: '.c-button',
     maskId: '#c-mask'
   });
+  console.log(pushRight);
 
   var pushRightBtn = document.querySelector('#c-button--push-right');
-  
+   console.log("qr",pushRightBtn);
   pushRightBtn.addEventListener('click', function(e) {
+  	console.log("right");
     e.preventDefault;
     pushRight.open();
   });

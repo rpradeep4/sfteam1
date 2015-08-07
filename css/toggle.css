@@ -2,7 +2,7 @@
 
 
 #ex1Slider .slider-selection {
-  background: #BABABA;
+  background: #186dc6;
      }
 
     #ex2Slider .slider-selection {
@@ -111,9 +111,9 @@ z-index:2;
         transform:rotateY(180deg);
 }
 body{
-  /*background:url("images/tab2.png");*/
-  background: "images/tab2.png";
-  background-size: cover;  
+ /*background:url("http://41.media.tumblr.com/7966b159dab1e92c984339a380925f87/tumblr_nsp3sue9T61uvgk9lo1_1280.png");
+ 
+  background-size: cover;  */
 }
   
 button .trans{
@@ -163,15 +163,31 @@ button .trans{
   left: 0;
 }
 
+.front {
+  backface-visibility: hidden;
+
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
 /* front pane, placed above back */
 .front {
 
   /* for firefox 31 */
-
+  height: 200px;
   transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
+  height: 200px;
   transform: rotateY(180deg);
+}
+
+.inner-image {
+  position: absolute;
+  top: 55px;
+  right: 25px;
 }
