@@ -84,20 +84,33 @@
 		<!-- drag -->
 	
 	</head>
-
 	<body>
+		
+		<button style = "position:absolute; top:270px;left:1083px" data-toggle="modal" data-target="#myModal" >try</button>
+		
 		<!-- Compare basket -->
 		<div class="compare-basket">
 			<button class="action1 action--button action--compare" ><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
 		</div>
-		<img src = "images/tab.png" width:"2093px" style = "position:absolute; top:0px;right:0px;">
-		<img src = "images/etf_dir.png" width:"3093px" style = "position:absolute; top:140px; background-size: cover">
+		<img src = "images/tab.png" width:"2093px" style = "position:absolute; top:0px;left:0px;">
+		<!-- <a href = "tools.html" ><img src = "images/tab.png" width:"2093px" style = "position:absolute; top:0px;right:0px;">-->
+		<img src = "images/etf_dir.png"  style = "position:absolute; top:140px;left:0px; right:0px;background:cover"
+		>
+		
 		<!--<img src = "images/etf_dir.png" style = "position:absolute; top:140px;background-size: cover;">-->
 		<!--<button class="trans" style = "position:absolute; top:280px;left:1093px" data-toggle="modal" data-target="#myModal"> what if </button>-->
 		<!--what if trans button -->
-		<img src = "images/transparent.png" style = "position:absolute; top:270px;left:1083px" data-toggle="modal" data-target="#myModal">
+		
+		
+
+
+		
+
 		<!-- ishares transparent button -->
-		<img src = "images/transparent.png" style = "position:absolute; top:260px;left:233px" id="ishares">
+		<img src = "images/transparent.png" style = "position:absolute; top:270px;left:983px;z-index:1; "data-toggle="modal" data-target="#myModal2">
+		<img src = "images/transparent.png" style = "position:absolute; top:260px;left:233px;z-index:1;" id="ishares">
+
+	
 		<p>
 			<p>
 		<!-- Main view -->
@@ -112,21 +125,24 @@
 
 				<input type="text"  placeholder="Search for ETF " style = "position:absolute; top:150px; right:0;">
 				<nav>-->
-					<button id="c-button--push-left" class="trans" ><img src="images/fil.png" style = "position:absolute; top:142px; left:0;"></button>
-					 
+					
 					
 
 	<div id="o-wrapper" class="o-wrapper">
 						  <div class="c-buttons">
+						  	<button id="c-button--push-left" ><img src="images/fil.png" style = "position:absolute; top:142px; left:0;"></button>
+					 <button id="c-button--push-right"   ><img src = "images/sym.png" width="150px"  style = "position:absolute; top:32px; right:44px;"></button>
+					 
         
       
-        <button id="c-button--push-right"  class="trans" ><img src = "images/sym.png" width="150px"  style = "position:absolute; top:32px; right:44px;"></button>
+       
        
       </div>
 	</div>		
 					
 				</nav>
 			</header>
+			<body>
 
 			<!--push left -->
 			<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
@@ -387,6 +403,61 @@
   </div><!--content-->
 </div><!--mlg-->
 </div><!--modal-->
+
+<!--what if modal -->
+
+<div id="myModal2" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       
+        <img src="images/whatif.png" alt="graph here" width="1000px">
+      </div>
+      <div class="modal-body">
+       
+        	
+
+        	<div class="flip-container-1" id = "img_chart" style="display:none" ontouchstart="this.classList.toggle('hover1');">
+        	<img src="images/g1.png" alt="graph here" style="width:704px;height:458px;">
+        </div>
+        	
+        	<div data-role="PAGE" id="page1" style ="display:none">
+
+			    <div data-role="header">
+			        
+			       <h1>what </h1>
+			    </div><!-- /header -->
+
+			    <div data-role="content">  
+
+			     <img src = "images/whatif.png" style="width:704px;height:458px;" >  
+			       
+			    	
+			    </div><!-- /content -->
+
+
+				</div>
+
+				
+
+
+      
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+    </div><!--body-->
+
+  </div><!--content-->
+</div><!--mlg-->
+</div><!--modal-->
+
+
+
+<!--end what if -->
 
 <!-- side bar -->
 
@@ -708,66 +779,10 @@
 			</div> 
 				<!--8-->
 
-				<div id = "myDiv7" class="product">
-					
-					<div id = "myDiv8" class="product__info" >
-						<div id = "myDiv8" class="flipper" onclick="this.classList.toggle('flipped')">
-						  <div id = "myDiv8" class="flipper">
-						    <div id = "myDiv8" class="front" >
-						      <!-- front content -->
-						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-
-												
-						      <img class="product__image" src="images/2.png" alt="Product 1" />
-						     <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">CLICK TO KNOW MORE</button>-->
-						     
-						    </div>
-						    
-						    <div id = "myDiv8" class="back">
-						      <!-- back content -->
-						      					 
-						      
-											
-
-							</div>
-
-											
-						</div>
-					</div>
-				</div>
-			</div> 
 				
-				<!--9-->
-
-				<div id = "myDiv9" class="product">
-					
-					<div id = "myDiv9" class="product__info" >
-						<div id = "myDiv9" class="flipper" onclick="this.classList.toggle('flipped')">
-						  <div id = "myDiv9" class="flipper">
-						    <div id = "myDiv9" class="front" >
-						      <!-- front content -->
-						      <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label><br>
-						     
-						      <img class="product__image" src="images/5.png" alt="Product 1" />
-						     
-						    </div>
-						    
-						    <div id = "myDiv9" class="back">
-						      <!-- back content -->
-						      					 
-						      
-											
-
-
-							</div>
-
-											
-						</div>
-					</div>
-				</div>
-			</div> 
 				
 			</section>
+
 		</div><!-- /view -->
 
 		
@@ -2530,19 +2545,19 @@ $(function () {
 		
   /**
    * Push right instantiation and action.
-   */console.log("in script");
+   */
   var pushRight = new Menu({
     wrapper: '#o-wrapper',
     type: 'push-right',
     menuOpenerClass: '.c-button',
     maskId: '#c-mask'
   });
-  console.log(pushRight);
+ 
 
   var pushRightBtn = document.querySelector('#c-button--push-right');
-   console.log("qr",pushRightBtn);
+ 
   pushRightBtn.addEventListener('click', function(e) {
-  	console.log("right");
+  	
     e.preventDefault;
     pushRight.open();
   });

@@ -150,9 +150,10 @@ polyline{
 </div><!--mlg-->
 </div><!--modal-->
 
-<body>
+<body background="images/tab2.png">
      <a href = "COMPARE_BOARD.html" ><img src = "images/tab.png" ></a>
-<div class="container">
+     
+<div class="container" >
 
    
     <h1 class = "animated fadeInLeft well">DETAILED COMPARISON</h1>
@@ -537,7 +538,7 @@ polyline{
                        
                        <!-- <button class="btn btn-info " onclick="transition()">Update</button>-->
                         <div id ="graph_here" style="display:none;">
-                            <button class="randomize">Next ETF</button>
+                            <button id="next" class="randomize">Next ETF</button>
                         </div> <!--graph ends here -->
                        <!--
                         <div id ="graph_here1" style="display:none; overflow:auto; height:720px; width:600px;">
@@ -1692,8 +1693,13 @@ $("#butt8").click(function(){
 <script>
 
 var svg = d3.select("#graph_here")
-    .append("svg")
+    .append("svg") .attr("style", "outline: thick solid grey;") 
     .append("g")
+
+   /* svg.append("rect")
+    .attr("width", "960px")
+    .attr("height", "500px")
+    .attr("fill", "white");*/
 
 svg.append("g")
     .attr("class", "slices");
@@ -1702,7 +1708,7 @@ svg.append("g")
 svg.append("g")
     .attr("class", "lines");
 
-var width = 960,
+var width = 760,
     height = 450,
     radius = Math.min(width, height) / 2;
 
@@ -1739,6 +1745,7 @@ change(randomData());
 
 d3.select(".randomize")
     .on("click", function(){
+        $("#next").value = "Previous";
         change(randomData());
     });
 
@@ -1961,8 +1968,8 @@ function bumpLayer(n, o) {
 -->
 
 <!-- high chart -->
- <script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+ <script src="js/highcharts.js"></script>
+<script src="js/highcharts-3d.js"></script>
 
 <script type="text/javascript">
 $(function () {
@@ -1979,7 +1986,7 @@ $(function () {
         },
         plotOptions: {
             column: {
-                depth: 40,
+                depth: 60,
                 stacking: true,
                 grouping: false,
                 groupZPadding: 10

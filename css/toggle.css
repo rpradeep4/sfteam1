@@ -110,10 +110,10 @@ z-index:2;
      -o-transform:rotateY(180deg);
         transform:rotateY(180deg);
 }
-body{
- /*background:url("http://41.media.tumblr.com/7966b159dab1e92c984339a380925f87/tumblr_nsp3sue9T61uvgk9lo1_1280.png");
+body .back_img{
+ background:url("http://41.media.tumblr.com/7966b159dab1e92c984339a380925f87/tumblr_nsp3sue9T61uvgk9lo1_1280.png");
  
-  background-size: cover;  */
+  background-size: cover;  
 }
   
 button .trans{
