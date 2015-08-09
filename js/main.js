@@ -130,6 +130,7 @@
 			compareItemEffectEl.className = 'compare__effect';
 
 			compareItemEffectEl.innerHTML = this.items[i].getAttribute('data-info');
+
 			//var title1 = document.createElement('p');
 			//var title2 = document.createElement('p');
 			//var t = document.createTextNode("RISK FACTOR BREAKDOWN");
@@ -141,10 +142,12 @@
 			//title1 = "";
 			//var title2 = document.createElement('p');
 			//title2 = "";
-			var risk_img = document.createElement('img');
-			risk_img.src = "images/1.png";
-			risk_img.class = 'inner-image';
-			risk_img.style.top = "200px";
+			/*var risk_img = document.createElement('img');
+			var risk_img1 = document.createElement('img');
+			var br = document.createElement('br');
+			risk_img.src = "images/det.png";
+			risk_img1.src = "images/risk.png";*/
+			
 
 			/*var risk_img1 = document.createElement('img');
 			var risk_img3 = document.createElement('img');
@@ -159,14 +162,20 @@
 			risk_img2.src = "images/risk2.png";
 			risk_img2.style.width = "450px"*/
 			var a = document.createElement('a');
-			a.text =' DETAILED ANALYSIS'
+			//a.text =' DETAILED ANALYSIS'
 			
 
 			
 			a.href = "table_try.html";
+			a.appendChild(compareItemEffectEl);
 			//document.body.appendChild(a);
-			compareItemWrapper.appendChild(compareItemEffectEl);
+			compareItemWrapper.appendChild(a);
+			/*compareItemWrapper.appendChild(br);
+			compareItemWrapper.appendChild(a);
+			compareItemWrapper.appendChild(br);
 			compareItemWrapper.appendChild(risk_img);
+			compareItemWrapper.appendChild(risk_img1);*/
+
 			/*compareItemWrapper.appendChild(title1);
 			
 			compareItemWrapper.appendChild(risk_img3);
