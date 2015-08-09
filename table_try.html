@@ -97,9 +97,9 @@ polyline{
 
 
 .bullet { font: 10px sans-serif; }
-.bullet .marker { stroke: #000; stroke-width: 2px; }
+.bullet .marker { stroke: #000; stroke-width: 4px; }
 .bullet .tick line { stroke: #666; stroke-width: .5px; }
-.bullet .range.s0 { fill: #eee; }
+.bullet .range.s0 { fill: #fff; }
 .bullet .range.s1 { fill: #ddd; }
 .bullet .range.s2 { fill: #ccc; }
 .bullet .measure.s0 { fill: lightsteelblue; }
@@ -177,8 +177,10 @@ polyline{
      
 <div class="container" >
 
-   
-    <h1 class = "animated fadeInLeft well">DETAILED COMPARISON</h1>
+   <h1 class = "animated fadeInRight heading"><strong><span style="color: #336633; display:inline;">DETAILED COMPARISON</span></strong></h1>
+    <img src = "images/fact.png" width:"40px" style ="display:inline;">
+
+
      <button id= "detailed_b" type="button" class="btn btn-success  animated fadeInLeft" >DETAILED ANALYSIS</button>
     <!--
      <button type="button" class="btn btn-success butt animated fadeInLeft" data-toggle="modal" data-target="#myModal">GRAPHICAL ANALYSIS</button>-->
@@ -547,15 +549,14 @@ polyline{
 
     <div   id="body_1" style="overflow:auto;">
     <br>
-    <button id = "butt9" type="button" style ="display:inline" class="btn btn-warning " >SECTOR ALLOCATION</button>
+    <button id = "butt9" type="button" style ="display:inline" class="btn " >SECTOR ALLOCATION</button>
             
-            <button type="button" style ="display:inline" id = "butt10" class="btn btn-warning ">FIXED INC ALLOCATION
+            <button type="button" style ="display:inline" id = "butt10" class="btn ">FIXED INC ALLOCATION
             </button>
 
-             <button type="button" style ="display:inline" id = "butt8" class="btn btn-warning ">HighChart
-            </button>
+            
                    
-             <button type="button" style ="display:inline" id = "butt7" class="btn btn-warning ">GEOGRAPHIC
+             <button type="button" style ="display:inline" id = "butt7" class="btn  ">GEOGRAPHIC
             </button>
                        
                        <!-- <button class="btn btn-info " onclick="transition()">Update</button>-->
@@ -1677,6 +1678,17 @@ $("#graphical").click(function(){
 
 
 </script>
+
+<!-- butt color-->
+
+<script>
+
+/*$(document).ready(function(){
+    $("#butt10").effect( "highlight", {color: 'grey'},300000 );
+     $("#butt9").effect( "highlight", {color: 'grey'},300000 );
+      $("#butt7").effect( "highlight", {color: 'grey'},300000 );
+});*/
+</script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
@@ -1694,14 +1706,14 @@ $("#detailed_b").click(function(){
 });
 $("#butt7").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},30000 );
+    $(this).effect( "highlight", {color: 'grey'},3000 );
     $("#graph_here").show();
      $("#container").hide();
       $("#fix").hide();
 });
 $("#butt9").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},30000 );
+    $(this).effect( "highlight", {color: 'grey'},3000 );
     $("#graph_here").hide();
     $("#graph_here1").hide();
     $("#fix").hide();
@@ -1712,7 +1724,7 @@ $("#butt9").click(function(){
 });
 $("#butt10").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},30000 );
+    $(this).effect( "highlight", {color: 'grey'},3000 );
     $("#graph_here").hide();
     $("#graph_here1").hide();
    // $("#load").load("bullet.html");
@@ -1723,7 +1735,7 @@ $("#butt10").click(function(){
 });
 $("#butt8").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},30000 );
+    $(this).effect( "highlight", {color: 'grey'},3000 );
     // $("#graph_here").hide();
     $("#graph_here1").show();
      $("#container").hide();
