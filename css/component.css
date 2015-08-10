@@ -63,8 +63,8 @@
 	padding: 0em 0em 0em;
 	background: #c0c0c0c0;
 	border-radius: 15px;
-	width:104px;
-	height:200px;
+	width:204px;
+	height:300px;
 }
 
 .product--selected {
@@ -480,6 +480,8 @@
 	display: inline-block;
 	width: 50%;
 }
+
+
 
 .compare__item:nth-of-type(2) {
 	/*background: #212227;*/

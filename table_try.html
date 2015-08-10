@@ -87,6 +87,7 @@ polyline{
 }
 
 
+
 #container {
   height: 400px; 
   min-width: 310px; 
@@ -145,78 +146,62 @@ polyline{
 </style>
 
 <!-- Modal -->
-<div id="myModal" class="modal fade " role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h3 class="modal-title well"> GRAPHICAL ANALYSIS</h3> 
-       <img ID ="tab" src="images/pdf.png" alt="graph here" style="width:404px;height:58px;">
-      </div>
-      <div class="modal-body">
-       
-            <button type="button" style ="display:inline" class="btn btn-info btn-lg butt" id = "butt">SECTOR ALLOCATION</button>
-            
-            <button type="button" style ="display:inline" id = "butt_port" class="btn btn-warning btn-lg butt">PORTFOLIO RETURN
-            </button>
-
-            
-           
-        </div>
-            
-            <div data-role="PAGE" id="page1" style ="display:none">
-
-                <div data-role="header">
-                    <h1>DETAILS ABOUT THIS </h1>
-                </div><!-- /header -->
-
-                <div data-role="content">    
-                   
-                    
-                </div><!-- /content -->
 
 
-                        
-                </div>
 
-                <div data-role="dialog"  id="body1" style ="display:none">
-                    <div data-role="header">
-                        <DIV CLASS ="container">
-                       <!-- <button class="btn btn-info  butt" onclick="transition()">Update</button>-->
-                    <h1></h1>
-                </div><!-- /header -->
-                 <div data-role="content">  
-                     </div><!-- /content -->
-                </div>
-            </div>
+<!--question-->
+ <a href = "COMPARE_BOARD.html" ><img src = "images/tab.png" ></a>
+ <img src = "images/background.png" width="1500px">
 
-
+    <div id="o-wrapper" class="o-wrapper">
+                          <div class="c-buttons">
+                            
+                                      <button id="c-button--push-right"   ><img src = "images/transparent.png"   style = "position:absolute; top:42px; right:194px;"></button>
+                     
+                     
+        
       
+       
+       
+      </div>
+    </div> 
 
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-    </div><!--body-->
+    <!-- right menu -->
 
-  </div><!--content-->
-</div><!--mlg-->
-</div><!--modal-->
 
-<body background="images/tab2.png">
-     <a href = "COMPARE_BOARD.html" ><img src = "images/tab.png" ></a>
-     
-<div class="container" >
+
+    
+     <body >
+
+
+<nav id="c-menu--push-right" class="c-menu c-menu--push-right"  style = "position:absolute; top:0px; right:0px;">
+  <!-- <button class="c-menu__close"><img src ="images/sym.png" > </button>-->
+  <ul class="c-menu__items">
+    
+    
+  </ul>
+</nav><!-- /c-menu push-right -->
+<div id="c-mask" class="c-mask"></div> 
+<div class="container" style ="display:inline; position:absolute; top:150px;"  >
 
    <h1 class = "animated fadeInRight heading"><strong><span style="color: #336633; display:inline;">DETAILED COMPARISON</span></strong></h1>
-    <img src = "images/fact.png" width:"40px" style ="display:inline;">
+    <img src = "images/fact.png" width:"20px" style ="display:inline; position:absolute; top:10px;left:1163px;">
 
 
-     <button id= "detailed_b" type="button" class="btn btn-success  animated fadeInLeft" >DETAILED ANALYSIS</button>
+     <button id= "detailed_b" type="button" class="btn  animated fadeInLeft" >DETAILED ANALYSIS</button>
+     <div class="dropdown" style ="display:inline; position:absolute; top:70px;left:1133px;">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">START TRADING
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">ETF1</a></li>
+        <li><a href="#">ETF2</a></li>
+        <li><a href="#">ETF3</a></li>
+      </ul>
+</div>
+      <button id= "detailed_b" type="button" class="btn  animated fadeInLeft" >START TRADING</button>
     <!--
      <button type="button" class="btn btn-success butt animated fadeInLeft" data-toggle="modal" data-target="#myModal">GRAPHICAL ANALYSIS</button>-->
-     <button id = "graphical" type="button" class="btn btn-success  animated fadeInLeft" >HIDE TABLES</button>
+    
    
 
     <div class ="col-md-8" style:"display:inline" STYLE = "display:none">
@@ -248,9 +233,9 @@ polyline{
     </table>
 </div>
 <!--tree -->
- <button id="CHOOSE" class="btn btn-success  animated fadeInRight" >
-             ADD A SIMILAR ETF </button>
-            
+ <button id="CHOOSE" class="btn  animated fadeInRight" >
+             MORE PRODUCTS </button>
+
 <div class ="col-md-3 animated slideInLeft" style="display:none" id="container">
 </div>
 
@@ -261,6 +246,8 @@ polyline{
 
 <!--summary -->
 <div id= "detailed" class = "col-md-4" style="display:none">
+     <button id = "graphical" type="button" style = "display:none" class="btn   animated fadeInLeft" >HIDE TABLES</button>
+     <br>
 <H3 style="display:inline"> SUMMARY </H3><img id = "1" src = "images/plus.png" width="12px" height="15px">
           <table id ="summary" style="display:none" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
@@ -268,7 +255,7 @@ polyline{
         <th class="info">   </th>
         <th class="info">ETF1</th>
         <th class="info">ETF2</th>
-         <th id = "ETF3" style = "display:none">HYG</th>
+         <th class="info" id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -397,9 +384,10 @@ polyline{
           <table style="display:none" ID ="creation"class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
-        <th>   </th>
-        <th>ETF1</th>
-        <th>ETF2</th>
+        <th class="info">   </th>
+        <th class="info">ETF1</th>
+        <th class="info">ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -426,10 +414,10 @@ polyline{
     <table style="display:none" id="liq" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
-        <th>   </th>
-        <th>ETF1</th>
-        <th>ETF2</th>
-        
+        <th class="info">   </th>
+        <th class="info">ETF1</th>
+        <th class="info">ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
       </tr>
     </thead>
     <tbody>
@@ -448,7 +436,7 @@ polyline{
         <td></td>
         <td></td>
       </tr>
-      <tr class="INFO">
+      <tr class="info">
         <td>30 DAYS AVG DAILY VOLUME(SHARES)</td>
         <td></td>
         <td></td>
@@ -465,9 +453,10 @@ polyline{
  <table style="display:none" id = "income" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
-        <th>   </th>
-        <th>ETF1</th>
-        <th>ETF2</th>
+        <th class="info">   </th>
+        <th class="info">ETF1</th>
+        <th class="info">ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -493,9 +482,10 @@ polyline{
  <table style="display:none" id = "fund_flows" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
-        <th>   </th>
-        <th>ETF1</th>
-        <th>ETF2</th>
+        <th class="info">   </th>
+        <th class="info">ETF1</th>
+        <th class="info">ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -521,9 +511,10 @@ polyline{
  <table style="display:none" id = "risk" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
-        <th>   </th>
-        <th>ETF1</th>
-        <th>ETF2</th>
+        <th class="info">   </th>
+        <th class="info">ETF1</th>
+        <th class="info">ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -543,9 +534,10 @@ polyline{
  <table style="display:none" id = "ytd" class="table table-striped table-bordered table-hover animated slideInLeft">
     <thead>
       <tr>
-        <th>   </th>
-        <th>ETF1</th>
-        <th>ETF2</th>
+        <th class="info">   </th>
+        <th class="info">ETF1</th>
+        <th class="info">ETF2</th>
+         <th id = "ETF3" style = "display:none">HYG</th>
         
       </tr>
     </thead>
@@ -555,7 +547,7 @@ polyline{
         <td></td>
         <td></td>
       </tr>
-      <tr class="INFO">
+      <tr class="info">
         <td> NAV PERFORMANCE - PRICE RETURN</td>
         <td></td>
         <td></td>
@@ -565,7 +557,7 @@ polyline{
         <td></td>
         <td></td>
       </tr>
-      <tr class="primary">
+      <tr class="info">
         <td> NAV PERFORMANCE - TOTAL RETURN</td>
         <td></td>
         <td></td>
@@ -579,7 +571,7 @@ polyline{
 </div>
 
 
-<div id = "graph_col" class="col-md-8" style="overflow:auto;">
+<div id = "graph_col" class="col-md-8" style="overflow:auto; display:inline;">
 
     <div   id="body_1" style="overflow:auto;">
     <br>
@@ -590,7 +582,7 @@ polyline{
 
             
                    
-             <button type="button" style ="display:inline" id = "butt7" class="btn  ">GEOGRAPHIC
+             <button type="button" style ="display:inline color:#fff" id = "butt7" class="btn  ">GEOGRAPHIC
             </button>
                        
                        <!-- <button class="btn btn-info " onclick="transition()">Update</button>-->
@@ -618,7 +610,7 @@ polyline{
  </div>
 
   <div id = "fix"  style="display:none; position:absolute; top:100px;left:33px;" >
-                            <button id="button1" >NEXT</button>
+                            <button id="button1" >NEXT ETF </button>
                         </div>
 
 </div><!--graph coll -->
@@ -628,55 +620,59 @@ polyline{
 <!--tree -->
 <script>
 var data = {
-    "name": "SIMILAR ETFS",
+    "name": "MORE PRODUCTS ",
     "children": [
         {
-        "name": "analytics",
+        "name": "RELATED PRODUCTS",
         "children": [
             {
-            "name": "HYG",
+            "name": "RELATED TO AGG",
             "children": [
                 {
-                "name": "AgglomerativeCluster",
+                "name": "IUSB",
                 "size": 3938},
             {
-                "name": "CommunityStructure",
+                "name": "ISTB",
                 "size": 3812},
             {
-                "name": "HierarchicalCluster",
+                "name": "ILTB",
                 "size": 6714},
             {
-                "name": "MergeEdge",
+                "name": "GOVT",
                 "size": 743}
             ]},
         {
-            "name": "graph",
+            "name": "RECENTLY VIEWED",
             "children": [
                 {
-                "name": "BetweennessCentrality",
+                "name": "HYG",
                 "size": 3534},
             {
-                "name": "LinkDistance",
+                "name": "SHYG",
                 "size": 5731},
             {
-                "name": "MaxFlowMinCut",
+                "name": "LQD",
                 "size": 7840},
-            {
-                "name": "ShortestPaths",
-                "size": 5914},
-            {
-                "name": "SpanningTree",
-                "size": 3416}
+            
             ]},
         {
-            "name": "optimization",
+            "name": "RELATED TO HYG",
             "children": [
                 {
-                "name": "AspectRatioBanker",
-                "size": 7074}
+                "name": "SHYG",
+                "size": 7074},
+                {
+                "name": "HYXU",
+                "size": 7074},
+                {
+                "name": "GHYG",
+                "size": 7074},
+                {
+                "name": "HYGH",
+                "size": 7074},
             ]}
         ]},
-    {
+    /*{
         "name": "animate",
         "children": [
             {
@@ -1413,7 +1409,7 @@ var data = {
         {
             "name": "Visualization",
             "size": 16540}
-        ]}
+        ]}*/
     ]
 };
 
@@ -1537,7 +1533,7 @@ function printSelectedNodes() {
           selected.push(n.name);
         }
     });
-    console.log(selected);
+    //console.log(selected);
     $("#ETF3").show();
      $("#ETF31").show();
       $("#ETF32").show();
@@ -1568,10 +1564,9 @@ function color(d) {
 
 <!-- Web2PDF Converter Button BEGIN -->
 <script type="text/javascript">
-var
-pdfbuttonlabel="Save  as PDF"
+
 </script>
-<script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
+
 <!-- Web2PDF Converter Button END -->
 
 
@@ -1733,22 +1728,26 @@ $("#graphical").click(function(){
 
 });
 
+
+
 $("#detailed_b").click(function(){
     //console.log("gr clicked");
+     $("#graphical").show();
+
     $("#detailed").show();
-     $("#hor_bar").hide();
-      $("#fix").hide();
+     //$("#hor_bar").hide();
+     // $("#fix").hide();
 });
 $("#butt7").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},3000 );
+    $(this).effect( "highlight", {color: 'black'},5800 );
     $("#graph_here").show();
      $("#hor_bar").hide();
       $("#fix").hide();
 });
 $("#butt9").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},3000 );
+    $(this).effect( "highlight", {color: 'black'},5800 );
     $("#graph_here").hide();
     $("#graph_here1").hide();
     $("#fix").hide();
@@ -1759,7 +1758,7 @@ $("#butt9").click(function(){
 });
 $("#butt10").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},3000 );
+    $(this).effect( "highlight", {color: 'black'},5800 );
     $("#graph_here").hide();
     $("#graph_here1").hide();
    // $("#load").load("bullet.html");
@@ -1770,7 +1769,7 @@ $("#butt10").click(function(){
 });
 $("#butt8").click(function(){
     //console.log("gr clicked");
-    $(this).effect( "highlight", {color: 'grey'},3000 );
+    $(this).effect( "highlight", {color: 'black'},5800 );
     // $("#graph_here").hide();
     $("#graph_here1").show();
      $("#hor_bar").hide();
@@ -1785,7 +1784,7 @@ $("#butt8").click(function(){
 (function() {
 
 var svg = d3.select("#graph_here")
-    .append("svg") .attr("style", "outline: thick solid grey;") 
+    .append("svg") .attr("style", "outline: thick solid black;") 
     .append("g")
 
    /* svg.append("rect")
@@ -2118,10 +2117,10 @@ var container = d3.bullet()
     .height(height);
 
     var data1 = [
-  {"title":"INTERM TERM(3-10YR)","subtitle":"%","ranges":[150,225,300],"measures":[220,270],"markers":[250]},
-  {"title":"LONG TERM (>10YR)","subtitle":"%","ranges":[20,25,30],"measures":[21,23],"markers":[26]},
-  {"title":"SHORT  TERM (1-3 YR)","subtitle":"%","ranges":[350,500,600],"measures":[100,320],"markers":[550]},
-  {"title":"OTHER/UNKNOWN ","subtitle":"%","ranges":[1400,2000,2500],"measures":[1000,1650],"markers":[2100]},
+  {"title":"INTERM TERM(3-10YR)","subtitle":"%","ranges":[50,65,90],"measures":[20,67],"markers":[38]},
+  {"title":"LONG TERM (>10YR)","subtitle":"%","ranges":[20,25,100],"measures":[21,83],"markers":[56]},
+  {"title":"SHORT  TERM (1-3 YR)","subtitle":"%","ranges":[50,85,100],"measures":[26,70],"markers":[42]},
+  {"title":"OTHER/UNKNOWN ","subtitle":"%","ranges":[40,80,90],"measures":[40,89],"markers":[32]},
   
 ];
 
@@ -2133,7 +2132,7 @@ var container = d3.bullet()
     .enter().append("svg")
       .attr("class", "bullet")
       .attr("width", width + margin.left + margin.right)
-      .attr("height", 50)
+      .attr("height", 90)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
       .call(container);
@@ -2314,6 +2313,31 @@ legend.append('text')
 })();
 
 </script>
+
+<!-- right menu -->
+    <script src="js/menu_nav.js"></script>
+<script>
+        
+  /**
+   * Push right instantiation and action.
+   */
+  var pushRight = new Menu({
+    wrapper: '#o-wrapper',
+    type: 'push-right',
+    menuOpenerClass: '.c-button',
+    maskId: '#c-mask'
+  });
+ 
+
+  var pushRightBtn = document.querySelector('#c-button--push-right');
+ 
+  pushRightBtn.addEventListener('click', function(e) {
+    console.log("clicked");
+    e.preventDefault;
+    pushRight.open();
+  });
+
+        </script>
 
 
 </body>

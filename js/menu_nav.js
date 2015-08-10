@@ -79,6 +79,7 @@
    * Open Menu.
    */
   Menu.prototype.open = function() {
+    console.log("open",this);
     this.body.classList.add('has-active-menu');
     this.wrapper.classList.add('has-' + this.options.type);
     this.menu.classList.add('is-active');
