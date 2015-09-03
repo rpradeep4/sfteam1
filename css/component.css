@@ -323,7 +323,8 @@
 .action--remove:hover,
 .action--compare-add:hover {
 	/*color: #5C5EDC;*/
-	color: #424542;
+	/*color: #424542;*/
+	color: #fff;
 }
 
 .action--compare-add .fa-check,
@@ -334,7 +335,7 @@
 .action--compare-add input[type=checkbox]:checked ~ .fa-check {
 	display: block;
 	/*color: #5C5EDC;*/
-	color: #424542;
+	color: #fff;
 }
 
 .check-hidden {
